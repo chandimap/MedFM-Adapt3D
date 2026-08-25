@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+
+# VS Code local state
+.vscode/
+
+# Medical imaging data and derived artefacts
+data/raw/
+data/interim/
+data/processed/
+data/cache/
+*.dcm
+*.nii
+*.nii.gz
+*.nrrd
+
+# Model artefacts and experiment outputs
+checkpoints/
+runs/
+outputs/
+*.pt
+*.pth
+*.ckpt
+
+# Operating-system files
+.DS_Store
+Thumbs.db

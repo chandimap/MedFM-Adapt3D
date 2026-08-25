@@ -1,0 +1,37 @@
+experiment:
+  name: MedFM-Adapt3D
+  seed: 17
+  task_family: pulmonary_nodule_3d
+
+
+research_question:
+  primary: >-
+    How efficiently and reliably can pretrained 3D medical models be adapted
+    to pulmonary-nodule tasks under severe annotation constraints?
+
+
+data:
+  primary_dataset: LIDC-IDRI
+  detection_protocol: LUNA16
+  external_generalisation_dataset: LNDb
+  later_extension: LUNA25
+
+
+few_shot:
+  unit: patient
+  nested_support_sets: true
+  budgets:
+    - 1
+    - 5
+    - 10
+    - 20
+
+
+reproducibility:
+  deterministic_algorithms: true
+  record_runtime_provenance: true
+
+
+reporting:
+  record_trainable_parameter_budget: true
+  prohibit_unverified_external_independence_claims: true
