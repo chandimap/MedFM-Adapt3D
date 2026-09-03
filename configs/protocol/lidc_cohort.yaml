@@ -1,0 +1,42 @@
+dataset:
+  name: LIDC-IDRI
+  source: TCIA
+  collection_version: 4
+  modality: CT
+
+identity:
+  patient_key: PatientID
+  study_key: StudyInstanceUID
+  series_key: SeriesInstanceUID
+  instance_key: SOPInstanceUID
+
+series_selection:
+  require_ct_modality: true
+  require_xml_uid_match: true
+  require_unique_sop_instance_uids: true
+  require_multiple_image_positions: true
+
+annotation:
+  preserve_reader_specific_annotations: true
+  reader_identity_scope: scan
+  require_annotation_sop_membership: true
+  preserve_inclusion_exclusion_rois: true
+  preserve_semantic_characteristics: true
+
+geometry_qc:
+  require_positive_pixel_spacing: true
+  require_positive_slice_thickness: true
+  require_consistent_rows_columns: true
+  duplicate_z_tolerance_mm: 0.001
+
+luna16_reference:
+  maximum_slice_thickness_mm: 2.5
+  record_rule_only: true
+
+manifest:
+  schema_version: "1.0"
+  sort_key:
+    - patient_id
+    - study_instance_uid
+    - series_instance_uid
+  indent: 2

@@ -1,13 +1,14 @@
 # Data directory
 
-Raw medical images are intentionally not version-controlled.
+Raw medical images and source annotations are intentionally not
+version-controlled.
 
-Planned local layout:
+Local layout:
 
 ```text
 data/
-├── raw/          # original downloaded data; immutable
-├── interim/      # parsed/converted intermediate artefacts
-├── processed/    # deterministic model-ready derivatives
+├── raw/          # immutable source data
+├── interim/      # deterministic intermediate artefacts
+├── processed/    # model-ready derivatives
 ├── cache/        # disposable caches
-└── manifests/    # small machine-readable manifests that may be versioned
+└── manifests/    # machine-readable cohort provenance and audits
