@@ -35,3 +35,7 @@ outputs/
 # Operating-system files
 .DS_Store
 Thumbs.db
+
+# Locally generated LIDC cohort artefacts
+data/manifests/lidc_idri_manifest.json
+data/manifests/lidc_idri_audit.json

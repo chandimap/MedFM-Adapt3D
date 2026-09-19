@@ -132,20 +132,21 @@ def build_lidc_manifest(
             xml_scan.series_instance_uid,
         )
 
+        dicom = dicom_series.get(key)
+
+        if dicom is None:
+            # XML annotations for series that are not present in the locally
+            # downloaded DICOM subset are expected during pilot-cohort audits.
+            continue
+
         if key in observed_xml_keys:
             raise ValueError(
-                "Multiple XML files resolve to the same DICOM study/series: "
+                "Multiple XML files resolve to the same locally available "
+                "DICOM study/series: "
                 f"{key!r}"
             )
 
         observed_xml_keys.add(key)
-
-        dicom = dicom_series.get(key)
-
-        if dicom is None:
-            # The missing linkage is represented at cohort-build level rather
-            # than silently selecting an unrelated CT series.
-            continue
 
         records.append(
             build_manifest_record(
