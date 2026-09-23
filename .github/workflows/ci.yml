@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -39,3 +39,6 @@ jobs:
 
       - name: Validate research contract
         run: python scripts/validate_research_contract.py
+
+      - name: Validate preprocessing contract
+        run: python scripts/validate_preprocessing_contract.py

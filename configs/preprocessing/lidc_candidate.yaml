@@ -1,0 +1,39 @@
+schema_version: "1.0"
+
+dicom_validation:
+  require_explicit_rescale: true
+  maximum_slice_spacing_deviation_mm: 0.05
+  maximum_in_plane_position_residual_mm: 0.10
+  minimum_hu_dynamic_range: 500.0
+  air_reference_upper_bound_hu: -500.0
+
+spatial_preprocessing:
+  canonical_orientation: LPS
+  target_spacing_mm:
+    - 1.0
+    - 1.0
+    - 1.0
+  image_interpolation: linear
+  mask_interpolation: nearest
+  candidate_crop_extent_mm:
+    - 64.0
+    - 64.0
+    - 64.0
+
+intensity_preprocessing:
+  hu_window:
+    - -1000.0
+    - 400.0
+  output_range:
+    - -1.0
+    - 1.0
+
+mask_geometry_qc:
+  minimum_resampled_volume_ratio: 0.65
+  maximum_resampled_volume_ratio: 1.50
+  tiny_nodule_maximum_source_volume_mm3: 150.0
+  tiny_nodule_minimum_resampled_volume_ratio: 0.45
+  tiny_nodule_maximum_resampled_volume_ratio: 2.10
+  maximum_centroid_shift_mm: 1.50
+  minimum_crop_volume_retention: 0.999
+  fail_on_violation: true
