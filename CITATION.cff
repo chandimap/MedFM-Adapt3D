@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: >-
+  If you evaluate MedFM-Adapt3D, cite the project and preserve its authorship
+  and provenance notices.
+title: MedFM-Adapt3D
+type: software
+authors:
+  - family-names: Liyana
+    given-names: Chandima
+version: 0.1.0.dev0
+date-released: 2026-09-22
+repository-code: https://github.com/chandimap/MedFM-Adapt3D

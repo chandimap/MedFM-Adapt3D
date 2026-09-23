@@ -1,0 +1,12 @@
+MedFM-Adapt3D
+Copyright (c) 2026 Chandima Liyana. All rights reserved.
+
+Original project and authorship: Chandima Liyana
+Canonical source: https://github.com/chandimap/MedFM-Adapt3D
+
+MedFM-Adapt3D is source-available for limited research evaluation under the
+MedFM-Adapt3D Research Evaluation License 1.0. It is not open-source software
+and is not licensed for clinical use. See LICENSE for the controlling terms.
+
+Medical datasets, annotations, pretrained weights, and third-party packages
+are not relicensed by this repository and remain subject to their own terms.

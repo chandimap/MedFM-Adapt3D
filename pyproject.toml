@@ -1,21 +1,27 @@
 [build-system]
-requires = ["setuptools>=75", "wheel"]
+requires = ["setuptools>=77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 
 [project]
 name = "medfm-adapt3d"
 version = "0.1.0.dev0"
-description = "Research framework for trustworthy, label-efficient adaptation of 3D medical models."
+description = "Research Framework for Trustworthy, Label-Efficient Adaptation of 3D Medical Models."
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
+authors = [
+    { name = "Chandima Liyana" },
+]
+license = "LicenseRef-MedFM-Adapt3D-Research-Evaluation-1.0"
+license-files = ["LICENSE", "NOTICE"]
 
 dependencies = [
     "torch==2.13.0",
     "monai==1.6.0",
     "numpy>=1.24,<3.0",
     "PyYAML>=6.0,<7.0",
-    "pydicom>=3.0,<4.0",
+    "pydicom==3.0.2",
+    "SimpleITK==2.5.6",
 ]
 
 
@@ -33,6 +39,10 @@ where = ["src"]
 [tool.pytest.ini_options]
 addopts = "-ra --strict-markers --strict-config"
 testpaths = ["tests"]
+filterwarnings = [
+    "error",
+    "ignore:`torch\\.jit\\.interface` is deprecated.*:DeprecationWarning",
+]
 
 
 [tool.ruff]
