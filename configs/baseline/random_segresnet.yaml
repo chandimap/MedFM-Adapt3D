@@ -1,0 +1,58 @@
+schema_version: "1.0"
+task: oracle-centred localized 3D pulmonary-nodule segmentation
+data:
+  budgets: [1, 5, 10, 20]
+  unit: patient
+  nested_support: true
+  validation_fraction: 0.20
+  test_fraction: 0.20
+seeds:
+  partition: 101
+  support: 211
+  model: [17, 29, 43, 59, 71]
+  augmentation: 307
+  loader: 401
+  calibration: 997
+  smoke: 991
+model:
+  architecture: SegResNet
+  initialization: random
+  init_filters: 16
+  blocks_down: [1, 2, 2, 2]
+  blocks_up: [1, 1, 1]
+  norm_groups: 8
+  upsample_mode: deconv
+optimization:
+  optimizer: AdamW
+  learning_rate: 0.001
+  weight_decay: 0.00001
+  batch_size: 2
+  loss: DiceCELoss
+  dice_weight: 1.0
+  ce_weight: 1.0
+  gradient_clip_norm: 5.0
+  max_steps: 8000
+  min_steps: 2000
+  validation_interval: 200
+  patience: 10
+  min_delta: 0.0005
+smoke:
+  max_steps: 12
+  min_steps: 4
+  validation_interval: 4
+  patience: 2
+sampling:
+  strategy: patient-balanced-reader-rotation
+  # Preserve the anatomically normalized LPS orientation; no spatial reflections.
+  flip_probability: 0.0
+evaluation:
+  threshold: 0.5
+  selection_metric: patient_macro_dice
+  selection_tie_break: earliest_step
+  test_use: once_after_optimization_adequacy
+  hd95_undefined_policy: null_with_counts
+  metrics: [dice, hd95_mm, absolute_volume_error_mm3, voxel_sensitivity, empty_prediction]
+reporting:
+  seed_statistics: [mean, std, median, iqr, min, max]
+  seed_uncertainty: stochastic_initialization_under_fixed_cohort
+  population_inference: false
