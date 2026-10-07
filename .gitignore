@@ -39,3 +39,19 @@ Thumbs.db
 # Locally generated LIDC cohort artefacts
 data/manifests/lidc_idri_manifest.json
 data/manifests/lidc_idri_audit.json
+
+# All private cohort/index/partition artefacts, including alternative local names
+data/manifests/
+data/private/
+*.npy
+*.npz
+*.xml
+
+# Local research environments, exports, and model formats
+.env
+.env.*
+*.safetensors
+*.onnx
+*.mha
+*.mhd
+*.raw
