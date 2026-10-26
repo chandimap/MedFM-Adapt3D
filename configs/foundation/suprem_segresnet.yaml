@@ -1,0 +1,45 @@
+schema_version: "1.0"
+model_id: suprem-segresnet-2100
+upstream_repository: https://github.com/MrGiovanni/SuPreM
+upstream_revision: 7583213147e33daf2031cc0a3ad30faa516f4f64
+checkpoint_repository: MrGiovanni/SuPreM
+checkpoint_revision: 46ab78c25b07ace573177ebffd02214f670c7e4f
+checkpoint_filename: supervised_suprem_segresnet_2100.pth
+checkpoint_sha256: 2db81dc05cd9ea7234ca75e921e53e32b8716dc4cba88a6710742bfc282589a3
+checkpoint_size_bytes: 56500623
+overlap_status: NOT_ESTABLISHED
+license_status: CONFLICTING_PUBLIC_METADATA
+evidence:
+  - url: https://www.cs.jhu.edu/~zongwei/publication/li2023suprem.pdf
+    finding: >-
+      The ICLR 2024 paper distinguishes the 2100-volume benchmarking models from
+      the 9262-volume models. It reports validation-based checkpoint selection on
+      1310 CT volumes. A source-dataset table is not a patient-identity crosswalk
+      for this exact checkpoint and the local LIDC-IDRI cohort.
+  - url: https://github.com/MrGiovanni/SuPreM/blob/7583213147e33daf2031cc0a3ad30faa516f4f64/README.md
+    finding: >-
+      The SegResNet entry links this exact 2100-CT checkpoint. The repository
+      headline describes a larger dataset and must not replace release-specific provenance.
+  - url: https://huggingface.co/api/models/MrGiovanni/SuPreM/revision/46ab78c25b07ace573177ebffd02214f670c7e4f?blobs=true
+    finding: >-
+      The release lists 56500623 bytes and LFS SHA-256
+      2db81dc05cd9ea7234ca75e921e53e32b8716dc4cba88a6710742bfc282589a3
+      for supervised_suprem_segresnet_2100.pth. These identify bytes, not patients.
+  - url: https://github.com/MrGiovanni/SuPreM/blob/7583213147e33daf2031cc0a3ad30faa516f4f64/LICENSE
+    finding: >-
+      The GitHub licence states CC BY-NC-ND 4.0; the Hugging Face model metadata
+      declares Apache-2.0. This project does not redistribute upstream code,
+      pretrained tensors, or adapted copies of those tensors, and does not
+      claim that the conflicting weight terms have been adjudicated.
+  - url: https://github.com/Luffy03/VoCo#prepare-dataset
+    finding: >-
+      The published 10k pretraining recipe explicitly includes Luna16-jx and LiDC.
+      That release is excluded from a clean LIDC-IDRI generalization comparison.
+  - url: https://github.com/MrGiovanni/SuPreM/blob/7583213147e33daf2031cc0a3ad30faa516f4f64/supervised_pretraining/train.py
+    finding: >-
+      Published training-code defaults include an abdominal HU window [-175,250],
+      range [0,1], 1.5-mm spacing, and 96-voxel crops. These defaults do not
+      establish this exact checkpoint's full training recipe. This experiment
+      deliberately retains the indexed thoracic preprocessing in both arms;
+      a negative transfer observation cannot separate input/domain mismatch
+      from representation limitations.

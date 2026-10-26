@@ -54,3 +54,6 @@ jobs:
 
       - name: Exercise synthetic baseline end-to-end
         run: python scripts/smoke_random_baseline.py
+
+      - name: Validate frozen representation provenance and claim limits
+        run: python scripts/validate_frozen_representation_contract.py

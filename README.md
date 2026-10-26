@@ -60,13 +60,35 @@ See the [baseline protocol](docs/random_baseline_protocol.md),
 
 This establishes a conventional reference, not whole-scan detection, screening,
 malignancy diagnosis, clinical deployability, or evidence that any K is clinically
-sufficient. A later comparison with a different foundation-model architecture
-cannot attribute performance differences solely to pretraining. No real LIDC
+sufficient. Comparisons with different architectures or trainability cannot
+attribute performance differences solely to pretraining. No real LIDC
 baseline performance has been measured in the supplied verification environment.
 
 Raw medical images, generated manifests, caches, model weights, and experiment
 outputs are intentionally excluded from Git. Tests and validation scripts use
 synthetic data and make no claim of clinical performance.
+
+## Audited Frozen Representation
+
+One pretrained family is integrated: the pinned **SuPreM SegResNet 2100-CT
+encoder**, with a newly initialized 241-parameter multiscale dense linear
+segmentation head. Every encoder tensor must load exactly; parameters and
+buffers remain frozen. An architecture-matched frozen random encoder uses
+identical head initialization, patient partitions, support sets, and optimization.
+The existing fully trainable conventional reference remains a separate comparator.
+
+Exact checkpoint bytes are identified and verified. **Patient-level pretraining
+overlap with LIDC-IDRI is NOT_ESTABLISHED.** Engineering and train/validation
+adaptation are enabled; held-out test access, clean-generalization claims, and
+clinical-performance claims are disabled for this integration. Both arms retain
+the indexed thoracic preprocessing; compatibility with the source input recipe
+is unestablished. Published VoCo 10k pretraining includes LIDC/LUNA16 and is
+excluded from a clean LIDC comparison.
+
+See the [representation protocol](docs/frozen_representation_protocol.md),
+[source audit](configs/foundation/suprem_segresnet.yaml), and
+[verification record](docs/frozen_representation_verification.md). No upstream
+code, pretrained tensors, or adapted encoder tensors are distributed here.
 
 ## Development Checks
 
@@ -78,6 +100,7 @@ python scripts/validate_research_contract.py
 python scripts/validate_preprocessing_contract.py
 python scripts/validate_random_baseline_contract.py
 python scripts/smoke_random_baseline.py
+python scripts/validate_frozen_representation_contract.py
 ```
 
 ## Licence and Use Restrictions

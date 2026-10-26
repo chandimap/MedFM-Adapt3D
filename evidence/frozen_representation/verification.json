@@ -1,0 +1,86 @@
+{
+  "base_git_commit": "7617657605634d4e0e9fbfeb0f90eaa7fbc2a66c",
+  "clean_generalization_claimed": false,
+  "clinical_performance_claimed": false,
+  "device": "cpu",
+  "distribution_contains_upstream_code_or_encoder_weights": false,
+  "environment": {
+    "monai_version": "1.6.0",
+    "python_version": "3.12.14",
+    "pytorch_version": "2.13.0+cpu"
+  },
+  "evidence_scope": "synthetic implementation and provenance verification only",
+  "implementation_sha256": "b3db7c0cc140c9d9c9bf76509282a3dcce18647f243720be4129ab5cc45488fd",
+  "limits": [
+    "No real LIDC-IDRI experiment was performed in this supplied verification.",
+    "Phantom execution does not establish clinical accuracy, robustness, calibration, or population generalizability.",
+    "The fixed thoracic input protocol differs from published source-code defaults; source-input compatibility is not established.",
+    "The fixed random representation does not estimate random-encoder variability.",
+    "The current code is research software and has not been clinically validated or certified for deployment."
+  ],
+  "official_checkpoint": {
+    "bytes": 56500623,
+    "encoder_tensor_coverage": 1.0,
+    "filename": "supervised_suprem_segresnet_2100.pth",
+    "model_id": "suprem-segresnet-2100",
+    "revision": "46ab78c25b07ace573177ebffd02214f670c7e4f",
+    "sha256": "2db81dc05cd9ea7234ca75e921e53e32b8716dc4cba88a6710742bfc282589a3"
+  },
+  "patient_level_pretraining_overlap": "NOT_ESTABLISHED",
+  "real_held_out_test_enabled": false,
+  "regression": {
+    "errors": 0,
+    "existing_cases": 112,
+    "failed": 0,
+    "representation_cases": 51,
+    "skipped": 0,
+    "total_passed": 163
+  },
+  "schema_version": "1.0",
+  "source_input_recipe_compatibility": "NOT_ESTABLISHED",
+  "synthetic_pair": {
+    "arms": {
+      "random_frozen": {
+        "actual_optimizer_steps": 12,
+        "encoder_final_sha256": "653ef804271d875bdb3170f3d6481796bf8fd0bf6717fdbff87f074c21f3c2b6",
+        "encoder_initial_sha256": "653ef804271d875bdb3170f3d6481796bf8fd0bf6717fdbff87f074c21f3c2b6",
+        "encoder_tensors_loaded": 0,
+        "encoder_unchanged": true,
+        "frozen_encoder_parameters": 4399344,
+        "head_updated": true,
+        "optimization_adequacy": "passed",
+        "optimization_gate_reason": null,
+        "selected_validation_step": 4,
+        "test_image_mask_qc_loads": 0,
+        "trainable_head_parameters": 241,
+        "zero_validation_overlap": false
+      },
+      "suprem_frozen": {
+        "actual_optimizer_steps": 12,
+        "encoder_final_sha256": "334343192f91d8f7be5282c5c25e713b42973a9127bdf5e46b1dbe614adb9d00",
+        "encoder_initial_sha256": "334343192f91d8f7be5282c5c25e713b42973a9127bdf5e46b1dbe614adb9d00",
+        "encoder_tensors_loaded": 58,
+        "encoder_unchanged": true,
+        "frozen_encoder_parameters": 4399344,
+        "head_updated": true,
+        "optimization_adequacy": "blocked",
+        "optimization_gate_reason": "Collapsed validation predictions block optimization adequacy/test.",
+        "selected_validation_step": 4,
+        "test_image_mask_qc_loads": 0,
+        "trainable_head_parameters": 241,
+        "zero_validation_overlap": true
+      }
+    },
+    "head_initial_sha256": "1119b395654fad9747d10bbf2af0ad7a92815d251e0d1c9256eda86e6c5d6b6c",
+    "head_seed": 991,
+    "interpretation": "The pretrained 12-step smoke had zero validation overlap and a blocked adequacy gate; no performance ranking is emitted.",
+    "k_labelled_patients": 1,
+    "matched_frozen_architecture": true,
+    "matched_head_initialization": true,
+    "patients": 10,
+    "performance_comparison_interpretable": false,
+    "validation_dice_difference": null
+  },
+  "upstream_licence_status": "CONFLICTING_PUBLIC_METADATA",
+  "verification_date": "2026-10-25"
+}
