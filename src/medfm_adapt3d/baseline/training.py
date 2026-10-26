@@ -24,7 +24,7 @@ from medfm_adapt3d.baseline.artifacts import (
 )
 from medfm_adapt3d.baseline.config import LIMITS, Phase
 from medfm_adapt3d.baseline.metrics import aggregate_patients, segmentation_metrics
-from medfm_adapt3d.baseline.model import AlignedSegResNet, build_random_model, state_fingerprint
+from medfm_adapt3d.baseline.model import build_random_model, state_fingerprint
 from medfm_adapt3d.baseline.protocol import LockedProtocol
 from medfm_adapt3d.baseline.sampling import PatientBalancedSampler, augment_pair
 from medfm_adapt3d.baseline.selection import (
@@ -47,7 +47,7 @@ def _git_dirty() -> bool | None:
 
 @torch.inference_mode()
 def evaluate(
-    model: AlignedSegResNet,
+    model: torch.nn.Module,
     access: RunAccess,
     partition: str,
     *,
@@ -372,7 +372,7 @@ def _execute(
         target_exposure=dict(sampler.target_exposure),
         candidate_sizes={r.candidate_id: math.prod(r.shape_cdhw) for r in protocol.index.records},
     )
-    # Preserve engineering failures for calibration review. Definitive failures
+    # Preserving engineering failures for calibration review. Definitive failures
     # raise before release_test/open_test, never after viewing held-out scores.
     gate_error = None
     try:
