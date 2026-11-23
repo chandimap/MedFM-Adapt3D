@@ -1,0 +1,11 @@
+{
+ "kind":"retrospective diagnostic follow-up fixed before executing new outcomes",
+ "parent":"fdc0c2c5129d69167a0b721c0daf116bf4a14c61",
+ "catalog":"same ten Siemens LIDC-IDRI patients, index and partitions from primary study",
+ "study":"four original arms; two real K budgets 1 and 5; seed 991; original batch of one, sampler, optimizer, head, adapter and 0.5 threshold",
+ "bounded_schedule":{"max_steps":256,"min_steps":256,"validation_interval":32,"patience":3,"selection":"earliest highest patient-macro validation Dice at steps 32,64,...,256","adequacy":"original gate; require all support targets, finite outputs, meaningful plateau and noncollapse; withhold failed-pair delta"},
+ "reason":"The primary study had only 12 draws and left 11 of 22 K5 reader targets unseen. 256 steps provide roughly 51 visits per K5 patient with batch one. The interval and stopping floor ensure a common training horizon; the altered validation grid is disclosed.",
+ "overfit":{"target":"lexicographically first candidate_id in locked K=1 support","arms":["suprem_frozen","suprem_feature"],"steps":512,"readouts":[0,12,64,128,256,512],"criterion":"terminal same-target Dice at least 0.80 at threshold 0.5, no validation or test reads","loss":"original unweighted DiceCE/AdamW with original LR and clipping","features":"cached fixed encoder features for this diagnostic only; compare uncached dense logits at start and finish"},
+ "technical_diagnostics":"The clinical primary threshold stays 0.5. At the existing short and new selected checkpoints summarize fixed 0.10,0.25,0.50,0.75 thresholds, class-conditional probabilities and foreground density on support and validation; never choose or refit a threshold. Inspect indexed geometry and trace nearest-neighbor and linear interpolation for the fixed support example against source DICOM and XML. No checkpoint tuning from these diagnostics.",
+ "scope":"No external-domain or performance-superiority claim, no test loads; no further choices based on measured Dice."
+}

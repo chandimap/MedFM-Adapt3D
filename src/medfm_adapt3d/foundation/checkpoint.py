@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import time
 from pathlib import Path
 from typing import Any
 
@@ -22,6 +23,7 @@ def load_encoder_checkpoint(
     expected_bytes: int,
 ) -> dict[str, Any]:
     """No network access, permissive unpickling, partial load, or random fallback."""
+    start = time.perf_counter()
     if path.stat().st_size != expected_bytes or file_hash(path) != expected_sha256:
         raise ValueError("Checkpoint size/SHA-256 mismatch; nothing was deserialized.")
     payload = torch.load(path, map_location="cpu", weights_only=True)
@@ -55,6 +57,7 @@ def load_encoder_checkpoint(
     encoder.load_state_dict(selected, strict=True)
     return {
         "checkpoint_sha256": expected_sha256,
+        "verified_load_seconds": time.perf_counter() - start,
         "checkpoint_size_bytes": expected_bytes,
         "encoder_tensor_count": len(selected),
         "encoder_tensor_coverage": 1.0,

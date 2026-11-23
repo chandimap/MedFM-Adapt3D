@@ -1,0 +1,50 @@
+{
+  "candidate_hash": "0a0623c93a1e9d10e2ccc695b6adf82fbae52f2cbf48c4b87a8a2c9a45fd9374",
+  "candidate_index_sha256": "5a7306dee8c6df64c1693abb6b590f3dc6f5afa82ca1d5f0806a5362696832bc",
+  "content_sha256": "cb24f853c6caa5b10b80fa00682b0761dbd8fba3c352aed3e5e9b2acf4c1a723",
+  "disagreeing_mask_voxels": 0,
+  "max_hu_equivalent_error_inside_window": 9.633498672112495e-05,
+  "normalized_ct_max_absolute_error": 1.3762140960160707e-07,
+  "normalized_ct_mean_absolute_error": 2.5744784576554006e-08,
+  "normalized_ct_voxels_error_above_1e-4": 0,
+  "orientation_matrix_lps": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "partition_sha256": "388e6602b9209a1b87fc562471f7c56298cab8e5ba8ec4694b3fd3a5bbc4f906",
+  "pydicom": "3.0.2",
+  "raw_pixel_series_opened": 1,
+  "raw_xml_files_opened": 1,
+  "read_counts": {
+    "test": 0,
+    "train": 1,
+    "validation": 0
+  },
+  "reader_contours": 23,
+  "reader_provenance": "study/series, local reading-session slot, annotation identifier and SOP planes reconciled",
+  "scipy": "1.17.0",
+  "scope": "one K=1 training mark on the same public pilot; integrated source geometry spot check",
+  "script_sha256": "7b8db064fd63b582553361b70b4f4dc1ae589cc0f0a883e4c4c364f3fbf113f2",
+  "shape_zyx": [
+    65,
+    65,
+    65
+  ],
+  "spacing_mm_xyz": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "stored_mask_voxels": 4114,
+  "study": "independent DICOM physical-grid and reader-contour replay on one support target",
+  "voxels": 274625,
+  "xml_mask_dice": 1.0,
+  "xml_mask_voxels": 4114
+}

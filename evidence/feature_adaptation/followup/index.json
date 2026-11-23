@@ -1,0 +1,24 @@
+{
+  "content_sha256": "34ffc77b9f43b8ef849cd877b11d7e29d6cd54d875b799372608abec18130e0f",
+  "files": {
+    "ct_k1": "f56f83daf58e04e3cf4ea67007c83150775b91ff919e29fa0054a202a08d2d87",
+    "ct_k5": "de895dbf8779d60c6d002763ef76fa71f55be8cca83e723841da2c69627ee4d9",
+    "design": "244ff748f9090e7cf47437d28e3c2332f22ab3d9b43d351a882df69cb4a0635d",
+    "geometry": "b4090f645a3ad5d1959d004ab59542021ea021d810153383e1de04bcf8b0b132",
+    "overfit_suprem_feature": "79857bd871e1bb55c0fc5b9cffecd1fa5210b691202470b337520acebe40b315",
+    "overfit_suprem_frozen": "83061a63420d67ca2d439f6feedebc0838452f81c522298c0e0e06e04bf5dca0",
+    "readback_k1": "b91e2dc0f24ee3c9931d256d6b1466bd00a12374d4eae5bde3341308d250dd76",
+    "readback_k5": "d8c356350802017bfdd6edd1c654a980bb7e13e5a02d6075ba7c38e96f2229c6",
+    "threshold_extended_k1": "3964323e6e4800b7dded284319b785252e4c2f2c51c04128c93c86f8a17b4cec",
+    "threshold_extended_k5": "6ceea7e77f3d3a31cf2e8e45e7a6169a253db1e68a7f7294f7e5b7ba8c73859f",
+    "threshold_short_k1": "b41d7ee6b7e5282dddac3282ba601da49817742dd34e096cab8aec6d958510a9",
+    "threshold_short_k5": "9a544e322d5d957ec070ad563fc2f3062d58e4f5b827991b9d891a4234e4cd5f"
+  },
+  "heldout_test_evaluated": false,
+  "independent_external_peer_review": false,
+  "measured_package_source_sha256": "daf3e7b84223049414821e472992ebba43517f51860a091c1c7e85973c8061ba",
+  "measurement_git_commit": "48768a7cb87e2a6f095b6aa246224142f4a36606",
+  "schema_version": "1.0",
+  "selection_validation_used": true,
+  "study": "LIDC-IDRI bounded real-CT feature adaptation and failure investigation"
+}

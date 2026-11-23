@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "input_comparison_sha256": "f56f83daf58e04e3cf4ea67007c83150775b91ff919e29fa0054a202a08d2d87",
+  "audit_script_sha256": "e1b05143a1ad4f36f5a9ac376545b6b3077205ecf4b704d5f42d32aa8ea8b7c7",
+  "scipy": "1.17.0",
+  "arms": {
+    "random_feature": {
+      "status": "PASS",
+      "private_artifact_hashes_checked": 6,
+      "validation_observations": 4,
+      "patients": 2,
+      "metrics_per_observation": 5,
+      "validation_logits_bitwise_equal": true,
+      "test_array_reads": 0,
+      "fresh_task_restore": "PASS"
+    },
+    "random_frozen": {
+      "status": "PASS",
+      "private_artifact_hashes_checked": 6,
+      "validation_observations": 4,
+      "patients": 2,
+      "metrics_per_observation": 5,
+      "validation_logits_bitwise_equal": true,
+      "test_array_reads": 0,
+      "fresh_task_restore": "PASS"
+    },
+    "suprem_feature": {
+      "status": "PASS",
+      "private_artifact_hashes_checked": 6,
+      "validation_observations": 4,
+      "patients": 2,
+      "metrics_per_observation": 5,
+      "validation_logits_bitwise_equal": true,
+      "test_array_reads": 0,
+      "fresh_task_restore": "PASS"
+    },
+    "suprem_frozen": {
+      "status": "PASS",
+      "private_artifact_hashes_checked": 6,
+      "validation_observations": 4,
+      "patients": 2,
+      "metrics_per_observation": 5,
+      "validation_logits_bitwise_equal": true,
+      "test_array_reads": 0,
+      "fresh_task_restore": "PASS"
+    }
+  }
+}

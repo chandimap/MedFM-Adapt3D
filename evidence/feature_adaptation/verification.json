@@ -1,0 +1,229 @@
+{
+  "base_git_commit": "ac780b88a9bc5ee0878a142fea01bc38a9d0c1df",
+  "baseline_pytest_passed": 163,
+  "cohort": {
+    "catalog_ct_series": 1018,
+    "catalog_snapshot_sha256": "f83ee343f229240226e6e554a2a4ce9a73a414b88cb6ee0cbddc2eef4cf968e0",
+    "cohort_identity": "separately selected public LIDC-IDRI engineering cohort; no verified site labels",
+    "ct_catalog": "https://services.cancerimagingarchive.net/nbia-api/services/v1/getSeries?Collection=LIDC-IDRI&Modality=CT&format=json",
+    "ct_series_reconciled": 10,
+    "ct_source_doi": "10.7937/K9/TCIA.2015.LO9QL9SX",
+    "data_license": "CC BY 3.0",
+    "enrollment_rule": "First ten lexically ordered PatientID values with exactly one CT series in the full LIDC-IDRI CT catalog and SIEMENS as manufacturer. Selection fixed before inspecting annotations. All ten retained.",
+    "excluded_series": 0,
+    "partitions": {
+      "test": {
+        "patients": 2,
+        "reader_targets": 20
+      },
+      "train": {
+        "patients": 6,
+        "reader_targets": 28
+      },
+      "validation": {
+        "patients": 2,
+        "reader_targets": 4
+      }
+    },
+    "patient_level_pretraining_overlap": "NOT_ESTABLISHED",
+    "patients": 10,
+    "reader_targets": 52,
+    "source_contract_result": "PASS",
+    "source_preparation_includes_all_enrolled_images_and_annotations": true,
+    "support_target_counts": {
+      "1": 4,
+      "5": 22
+    },
+    "test_evaluation": "NOT RUN",
+    "unavailable_k": [
+      10,
+      20
+    ],
+    "xml_archive": "https://www.cancerimagingarchive.net/wp-content/uploads/LIDC-XML-only.zip",
+    "xml_archive_sha256": "644557a3aa305602609c718b0cae33a93be762e8901a80bcd9df735b0ec6ab90",
+    "xml_reconciliation": {
+      "TCIA documented March 2012 correction": 1,
+      "canonical XML equal after removing only root message UID; choose lexical first": 1,
+      "single XML": 8
+    }
+  },
+  "compileall": "PASS",
+  "effective_smoke_recipe": {
+    "batch_size": 1,
+    "head_seed": 991,
+    "max_steps": 12,
+    "min_steps": 4,
+    "patience": 2,
+    "validation_every": 4
+  },
+  "environment": {
+    "cuda_available": false,
+    "cuda_version": null,
+    "cudnn_version": null,
+    "device_name": null,
+    "git_commit": "ac780b88a9bc5ee0878a142fea01bc38a9d0c1df",
+    "monai_version": "1.6.0",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python_version": "3.12.14",
+    "pytorch_version": "2.13.0+cpu"
+  },
+  "experiments": {
+    "lidc_k1": "c4edd37ab30df1cd7f179cc3e18b773e66f4bea85e598d9ee8d73b5dcc02e7c4",
+    "lidc_k5": "eb5d63af8674e69132545314274884af1372b42219c7997ea45700db5bf8e5e6",
+    "phantom_calibration_k1": "b989df97cec6ff88a2e91b1a6d579275fc02ebf2b2151700c644606d4cd1579f",
+    "phantom_k1": "3d46a24d53ce268d86be61820200760a128468502ce3100b54b1bd326626a9cc"
+  },
+  "explicit_thread_environment": {
+    "OMP_NUM_THREADS": 2,
+    "SITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS": 2,
+    "torch_intraop": 2
+  },
+  "external_hospital_validation": "NOT RUN",
+  "final_pytest_passed": 186,
+  "hosted_ci_execution": "NOT RUN",
+  "independent_audit_script_sha256": "e1b05143a1ad4f36f5a9ac376545b6b3077205ecf4b704d5f42d32aa8ea8b7c7",
+  "legacy_receipt_sha256": "78ec23ef2aa407b39273076264678c317b9f18fab36e86f25b91d0921239d825",
+  "legacy_reproduction": {
+    "random_frozen": {
+      "historical_encoder_gate_steps_and_selection_reproduced": true,
+      "legacy_vs_instrumented_selected_weights_validation_and_exposure": "PASS"
+    },
+    "suprem_frozen": {
+      "historical_encoder_gate_steps_and_selection_reproduced": true,
+      "legacy_vs_instrumented_selected_weights_validation_and_exposure": "PASS"
+    }
+  },
+  "lint": "PASS",
+  "long_real_data_calibration": "NOT RUN",
+  "package_source_sha256": "ffb580ab2e3d5aa617f41c8121b82a9e01b883da32808bdce3e188e7e6f63729",
+  "pip_check": "PASS",
+  "primary_design_sha256": "3c0f196b57c58f162811ec9395921806e40b9b5a68877c8ad1ae6e02b956b6b5",
+  "schema_version": "1.0",
+  "scientific_validators_and_original_smokes": "PASS",
+  "secondary_design": "Exploratory existing calibration recipe on the same synthetic index after observing short-budget results, head seed 997, batch=2, min/max steps 2000/8000, validation every 200, patience=10. Real validation was not used to tune a recipe.",
+  "validation_readback": "Rebuilt both the production model and a separate functional PyTorch forward. Independently computed five metrics per validation observation and patient-macro aggregation with NumPy/SciPy. Overlap/count/volume/sensitivity tolerance 1e-10, HD95 tolerance 1e-4 mm.",
+  "validation_readback_scipy": "1.17.0",
+  "verification": {
+    "lidc_k1": {
+      "random_feature": {
+        "macro_metrics_recomputed": 5,
+        "observation_count": 4,
+        "observation_metrics_recomputed": 5,
+        "same_validation_logits": true,
+        "test_reads": 0
+      },
+      "random_frozen": {
+        "macro_metrics_recomputed": 5,
+        "observation_count": 4,
+        "observation_metrics_recomputed": 5,
+        "same_validation_logits": true,
+        "test_reads": 0
+      },
+      "suprem_feature": {
+        "macro_metrics_recomputed": 5,
+        "observation_count": 4,
+        "observation_metrics_recomputed": 5,
+        "same_validation_logits": true,
+        "test_reads": 0
+      },
+      "suprem_frozen": {
+        "macro_metrics_recomputed": 5,
+        "observation_count": 4,
+        "observation_metrics_recomputed": 5,
+        "same_validation_logits": true,
+        "test_reads": 0
+      }
+    },
+    "lidc_k5": {
+      "random_feature": {
+        "macro_metrics_recomputed": 5,
+        "observation_count": 4,
+        "observation_metrics_recomputed": 5,
+        "same_validation_logits": true,
+        "test_reads": 0
+      },
+      "random_frozen": {
+        "macro_metrics_recomputed": 5,
+        "observation_count": 4,
+        "observation_metrics_recomputed": 5,
+        "same_validation_logits": true,
+        "test_reads": 0
+      },
+      "suprem_feature": {
+        "macro_metrics_recomputed": 5,
+        "observation_count": 4,
+        "observation_metrics_recomputed": 5,
+        "same_validation_logits": true,
+        "test_reads": 0
+      },
+      "suprem_frozen": {
+        "macro_metrics_recomputed": 5,
+        "observation_count": 4,
+        "observation_metrics_recomputed": 5,
+        "same_validation_logits": true,
+        "test_reads": 0
+      }
+    },
+    "phantom_calibration_k1": {
+      "random_feature": {
+        "macro_metrics_recomputed": 5,
+        "observation_count": 4,
+        "observation_metrics_recomputed": 5,
+        "same_validation_logits": true,
+        "test_reads": 0
+      },
+      "random_frozen": {
+        "macro_metrics_recomputed": 5,
+        "observation_count": 4,
+        "observation_metrics_recomputed": 5,
+        "same_validation_logits": true,
+        "test_reads": 0
+      },
+      "suprem_feature": {
+        "macro_metrics_recomputed": 5,
+        "observation_count": 4,
+        "observation_metrics_recomputed": 5,
+        "same_validation_logits": true,
+        "test_reads": 0
+      },
+      "suprem_frozen": {
+        "macro_metrics_recomputed": 5,
+        "observation_count": 4,
+        "observation_metrics_recomputed": 5,
+        "same_validation_logits": true,
+        "test_reads": 0
+      }
+    },
+    "phantom_k1": {
+      "random_feature": {
+        "macro_metrics_recomputed": 5,
+        "observation_count": 4,
+        "observation_metrics_recomputed": 5,
+        "same_validation_logits": true,
+        "test_reads": 0
+      },
+      "random_frozen": {
+        "macro_metrics_recomputed": 5,
+        "observation_count": 4,
+        "observation_metrics_recomputed": 5,
+        "same_validation_logits": true,
+        "test_reads": 0
+      },
+      "suprem_feature": {
+        "macro_metrics_recomputed": 5,
+        "observation_count": 4,
+        "observation_metrics_recomputed": 5,
+        "same_validation_logits": true,
+        "test_reads": 0
+      },
+      "suprem_frozen": {
+        "macro_metrics_recomputed": 5,
+        "observation_count": 4,
+        "observation_metrics_recomputed": 5,
+        "same_validation_logits": true,
+        "test_reads": 0
+      }
+    }
+  },
+  "windows_execution": "NOT RUN"
+}
