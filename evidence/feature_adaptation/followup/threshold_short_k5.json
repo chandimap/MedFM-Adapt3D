@@ -1,0 +1,187 @@
+{
+  "arms": {
+    "suprem_feature": {
+      "read_counts": {
+        "test": 0,
+        "train": 22,
+        "validation": 4
+      },
+      "selected_step": 4,
+      "split": {
+        "train": {
+          "foreground_fraction": 0.0128490917366657,
+          "max_probability_off_target": 0.9643081426620483,
+          "max_probability_on_target": 0.9415021538734436,
+          "mean_probability_off_target": 0.1732358440176064,
+          "mean_probability_on_target": 0.14120869310899903,
+          "patients": 5,
+          "reader_targets": 22,
+          "reference_voxels": 77631,
+          "thresholds": {
+            "0.1": {
+              "empty_predictions": 0,
+              "overlap_voxels": 36056,
+              "patient_macro_dice": 0.030405612325351945,
+              "predicted_voxels": 3734691
+            },
+            "0.25": {
+              "empty_predictions": 0,
+              "overlap_voxels": 14650,
+              "patient_macro_dice": 0.02089476817060572,
+              "predicted_voxels": 1398155
+            },
+            "0.5": {
+              "empty_predictions": 0,
+              "overlap_voxels": 3191,
+              "patient_macro_dice": 0.011606525242310043,
+              "predicted_voxels": 227101
+            },
+            "0.75": {
+              "empty_predictions": 1,
+              "overlap_voxels": 704,
+              "patient_macro_dice": 0.004486466296319793,
+              "predicted_voxels": 21217
+            }
+          },
+          "voxels": 6041750
+        },
+        "validation": {
+          "foreground_fraction": 0.0006754665452890305,
+          "max_probability_off_target": 0.8911054134368896,
+          "max_probability_on_target": 0.18968236446380615,
+          "mean_probability_off_target": 0.1639576558243499,
+          "mean_probability_on_target": 0.055315668039485774,
+          "patients": 2,
+          "reader_targets": 4,
+          "reference_voxels": 742,
+          "thresholds": {
+            "0.1": {
+              "empty_predictions": 0,
+              "overlap_voxels": 134,
+              "patient_macro_dice": 0.00037257982105864615,
+              "predicted_voxels": 621072
+            },
+            "0.25": {
+              "empty_predictions": 0,
+              "overlap_voxels": 0,
+              "patient_macro_dice": 0.0,
+              "predicted_voxels": 261398
+            },
+            "0.5": {
+              "empty_predictions": 0,
+              "overlap_voxels": 0,
+              "patient_macro_dice": 0.0,
+              "predicted_voxels": 41506
+            },
+            "0.75": {
+              "empty_predictions": 0,
+              "overlap_voxels": 0,
+              "patient_macro_dice": 0.0,
+              "predicted_voxels": 2062
+            }
+          },
+          "voxels": 1098500
+        }
+      },
+      "state_sha256": "1d6b6052fb326b994568906e62915f032e72ff23a3b387050ed1bdb63000e466"
+    },
+    "suprem_frozen": {
+      "read_counts": {
+        "test": 0,
+        "train": 22,
+        "validation": 4
+      },
+      "selected_step": 4,
+      "split": {
+        "train": {
+          "foreground_fraction": 0.0128490917366657,
+          "max_probability_off_target": 0.9645214676856995,
+          "max_probability_on_target": 0.9416425824165344,
+          "mean_probability_off_target": 0.17390953379458043,
+          "mean_probability_on_target": 0.1414034761284718,
+          "patients": 5,
+          "reader_targets": 22,
+          "reference_voxels": 77631,
+          "thresholds": {
+            "0.1": {
+              "empty_predictions": 0,
+              "overlap_voxels": 36104,
+              "patient_macro_dice": 0.030408109715882474,
+              "predicted_voxels": 3744763
+            },
+            "0.25": {
+              "empty_predictions": 0,
+              "overlap_voxels": 14675,
+              "patient_macro_dice": 0.020851592700244705,
+              "predicted_voxels": 1408274
+            },
+            "0.5": {
+              "empty_predictions": 0,
+              "overlap_voxels": 3200,
+              "patient_macro_dice": 0.011568366710419633,
+              "predicted_voxels": 229995
+            },
+            "0.75": {
+              "empty_predictions": 1,
+              "overlap_voxels": 708,
+              "patient_macro_dice": 0.004502970551269191,
+              "predicted_voxels": 21486
+            }
+          },
+          "voxels": 6041750
+        },
+        "validation": {
+          "foreground_fraction": 0.0006754665452890305,
+          "max_probability_off_target": 0.8919097185134888,
+          "max_probability_on_target": 0.19079934060573578,
+          "mean_probability_off_target": 0.16461136083065167,
+          "mean_probability_on_target": 0.05547876380298618,
+          "patients": 2,
+          "reader_targets": 4,
+          "reference_voxels": 742,
+          "thresholds": {
+            "0.1": {
+              "empty_predictions": 0,
+              "overlap_voxels": 134,
+              "patient_macro_dice": 0.0003719489687041849,
+              "predicted_voxels": 622170
+            },
+            "0.25": {
+              "empty_predictions": 0,
+              "overlap_voxels": 0,
+              "patient_macro_dice": 0.0,
+              "predicted_voxels": 263340
+            },
+            "0.5": {
+              "empty_predictions": 0,
+              "overlap_voxels": 0,
+              "patient_macro_dice": 0.0,
+              "predicted_voxels": 42174
+            },
+            "0.75": {
+              "empty_predictions": 0,
+              "overlap_voxels": 0,
+              "patient_macro_dice": 0.0,
+              "predicted_voxels": 2102
+            }
+          },
+          "voxels": 1098500
+        }
+      },
+      "state_sha256": "3db2b52a0f620e345f845f03d0280c7950d961cf8c415184965247514dc36d53"
+    }
+  },
+  "comparison_sha256": "eb5d63af8674e69132545314274884af1372b42219c7997ea45700db5bf8e5e6",
+  "content_sha256": "71315384e563a69a9f1ec721c3bc9d479b56efb77cb3a78491597ab172da35fe",
+  "k": 5,
+  "primary_threshold": 0.5,
+  "script_sha256": "7b5bc4d6b4699b6c5b1e3a0e61e8e314c1505b585aa4665129fdec42db3ac33d",
+  "study": "prespecified descriptive threshold sensitivity; no threshold selection",
+  "synthetic": false,
+  "thresholds": [
+    0.1,
+    0.25,
+    0.5,
+    0.75
+  ]
+}

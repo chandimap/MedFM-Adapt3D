@@ -8,7 +8,11 @@ on:
 
 jobs:
   quality:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-2025]
+    runs-on: ${{ matrix.os }}
 
     steps:
       - name: Check out repository
@@ -57,3 +61,22 @@ jobs:
 
       - name: Validate frozen representation provenance and claim limits
         run: python scripts/validate_frozen_representation_contract.py
+
+      - name: Verify published feature-adaptation evidence
+        run: python scripts/validate_feature_evidence.py
+
+      - name: Retrieve pinned official SuPreM checkpoint
+        shell: bash
+        run: |
+          mkdir -p checkpoints
+          curl --fail --location --retry 3 --output checkpoints/supervised_suprem_segresnet_2100.pth \
+            'https://huggingface.co/MrGiovanni/SuPreM/resolve/46ab78c25b07ace573177ebffd02214f670c7e4f/supervised_suprem_segresnet_2100.pth?download=true'
+
+      - name: Exercise all four feature arms with the verified checkpoint
+        run: >
+          python -m medfm_adapt3d.foundation.feature_experiment
+          --checkpoint checkpoints/supervised_suprem_segresnet_2100.pth
+          --output outputs/feature_ci
+
+      - name: Check live optimizer, selected checkpoint and isolation evidence
+        run: python scripts/validate_feature_evidence.py --live outputs/feature_ci

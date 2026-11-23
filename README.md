@@ -90,6 +90,17 @@ See the [representation protocol](docs/frozen_representation_protocol.md),
 [verification record](docs/frozen_representation_verification.md). No upstream
 code, pretrained tensors, or adapted encoder tensors are distributed here.
 
+## Parameter-efficient feature adaptation
+
+A 128-parameter residual adapter trains alongside a 241-parameter segmentation
+probe on frozen convolutional SuPreM features. A ten-patient LIDC-IDRI pilot
+compared four arms at one- and five-patient label budgets. After 256 updates,
+the pretrained adapter reached selected validation Dice of 0.02286 and 0.01596.
+The matched head scored zero at both budgets. Each pretrained pair failed the
+prespecified optimization-adequacy comparison rule. The evidence supports
+correct task-parameter adaptation and leaves a performance advantage unresolved.
+[Methods, clinical diagnostics, original runs and reproduction commands](docs/research_evidence.md)
+
 ## Development Checks
 
 ```bash
@@ -101,6 +112,7 @@ python scripts/validate_preprocessing_contract.py
 python scripts/validate_random_baseline_contract.py
 python scripts/smoke_random_baseline.py
 python scripts/validate_frozen_representation_contract.py
+python scripts/validate_feature_evidence.py
 ```
 
 ## Licence and Use Restrictions

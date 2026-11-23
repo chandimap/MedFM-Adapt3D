@@ -1,0 +1,143 @@
+{
+  "arm": "suprem_feature",
+  "candidate_hash": "0a0623c93a1e9d10e2ccc695b6adf82fbae52f2cbf48c4b87a8a2c9a45fd9374",
+  "candidate_index_sha256": "5a7306dee8c6df64c1693abb6b590f3dc6f5afa82ca1d5f0806a5362696832bc",
+  "checkpoint_sha256": "2db81dc05cd9ea7234ca75e921e53e32b8716dc4cba88a6710742bfc282589a3",
+  "content_sha256": "155767403714cb0971de85efd024da896df7c49c1821f46555e07dd2290627d8",
+  "cpu_memory": {
+    "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "gpu_memory_bytes": null,
+    "logical_cpus_reported_by_os": 9,
+    "method": "psutil single worker process RSS, 10 ms sampling plus endpoints",
+    "peak_observed_rss_bytes": 780644352,
+    "psutil_version": "7.2.2",
+    "ram_bytes_reported_by_os": 10451423232,
+    "rss_end_bytes": 709144576,
+    "rss_start_bytes": 424521728,
+    "samples": 8673
+  },
+  "effective_optimization": {
+    "batch_size": 1,
+    "ce_weight": 1.0,
+    "dice_weight": 1.0,
+    "gradient_clip_norm": 5.0,
+    "learning_rate": 0.001,
+    "loss": "DiceCELoss",
+    "max_steps": 512,
+    "min_delta": 0.0005,
+    "min_steps": 512,
+    "optimizer": "AdamW",
+    "patience": null,
+    "selection": "none; fixed readouts",
+    "validation_interval": null,
+    "weight_decay": 1e-05
+  },
+  "encoder_after_sha256": "334343192f91d8f7be5282c5c25e713b42973a9127bdf5e46b1dbe614adb9d00",
+  "encoder_before_sha256": "334343192f91d8f7be5282c5c25e713b42973a9127bdf5e46b1dbe614adb9d00",
+  "environment": {
+    "cuda_available": false,
+    "cuda_version": null,
+    "cudnn_version": null,
+    "device_name": null,
+    "git_commit": "48768a7cb87e2a6f095b6aa246224142f4a36606",
+    "monai_version": "1.6.0",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python_version": "3.12.14",
+    "pytorch_version": "2.13.0+cpu"
+  },
+  "feature_recipe": {
+    "adapter_seed": 1301,
+    "bottleneck": 4,
+    "feature_level": 0,
+    "method": "residual_pointwise_relu"
+  },
+  "frozen_features_cached": true,
+  "groups_changed": {
+    "down": true,
+    "probe": true,
+    "up": true
+  },
+  "head_seed": 991,
+  "implementation_sha256": "daf3e7b84223049414821e472992ebba43517f51860a091c1c7e85973c8061ba",
+  "partition_sha256": "388e6602b9209a1b87fc562471f7c56298cab8e5ba8ec4694b3fd3a5bbc4f906",
+  "read_counts": {
+    "test": 0,
+    "train": 1,
+    "validation": 0
+  },
+  "readouts": [
+    {
+      "dice": 0.004664287879847944,
+      "loss": 1.4271937608718872,
+      "mean_p_background": 0.2986180782318115,
+      "mean_p_foreground": 0.09749478846788406,
+      "overlap_voxels": 100,
+      "predicted_voxels": 38765,
+      "reference_voxels": 4114,
+      "step": 0
+    },
+    {
+      "dice": 0.0,
+      "loss": 1.1146180629730225,
+      "mean_p_background": 0.048905301839113235,
+      "mean_p_foreground": 0.024136584252119064,
+      "overlap_voxels": 0,
+      "predicted_voxels": 0,
+      "reference_voxels": 4114,
+      "step": 12
+    },
+    {
+      "dice": 0.6438318017265385,
+      "loss": 0.5993236899375916,
+      "mean_p_background": 0.014786259271204472,
+      "mean_p_foreground": 0.5444669723510742,
+      "overlap_voxels": 2312,
+      "predicted_voxels": 3068,
+      "reference_voxels": 4114,
+      "step": 64
+    },
+    {
+      "dice": 0.8586872586872587,
+      "loss": 0.22020728886127472,
+      "mean_p_background": 0.002975198905915022,
+      "mean_p_foreground": 0.78227299451828,
+      "overlap_voxels": 3336,
+      "predicted_voxels": 3656,
+      "reference_voxels": 4114,
+      "step": 128
+    },
+    {
+      "dice": 0.8855771659509978,
+      "loss": 0.1553969830274582,
+      "mean_p_background": 0.00187703687697649,
+      "mean_p_foreground": 0.8372774124145508,
+      "overlap_voxels": 3506,
+      "predicted_voxels": 3804,
+      "reference_voxels": 4114,
+      "step": 256
+    },
+    {
+      "dice": 0.9008851764119187,
+      "loss": 0.12457488477230072,
+      "mean_p_background": 0.0014329811092466116,
+      "mean_p_foreground": 0.8686408996582031,
+      "overlap_voxels": 3613,
+      "predicted_voxels": 3907,
+      "reference_voxels": 4114,
+      "step": 512
+    }
+  ],
+  "script_sha256": "542a202dd59d7859be80419da77e713be55f6b23c95d493df6041e2a5bd20086",
+  "selection": "first lexicographically ordered K=1 reader target",
+  "study": "fixed single training mask memorization",
+  "synthetic": false,
+  "terminal_criterion": 0.8,
+  "terminal_criterion_met": true,
+  "threshold": 0.5,
+  "training_presentations": 512,
+  "uncached_logits_bitwise_equal_at_steps": [
+    0,
+    512
+  ],
+  "wall_seconds": 92.12013425600003
+}

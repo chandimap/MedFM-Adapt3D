@@ -22,6 +22,7 @@ dependencies = [
     "PyYAML>=6.0,<7.0",
     "pydicom==3.0.2",
     "SimpleITK==2.5.6",
+    "psutil>=5.9,<8",
 ]
 
 

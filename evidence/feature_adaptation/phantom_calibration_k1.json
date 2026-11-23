@@ -1,0 +1,1631 @@
+{
+  "arms": {
+    "random_feature": {
+      "adequacy": "PASSED",
+      "adequacy_reason": null,
+      "artifact_sha256": {
+        "COMPLETED.json": "ba3bc57655b590393c4e8efa6b8ffefae188fe5f901941476bd5b47acacc6314",
+        "checkpoint_lock.json": "16a814008fe81a0b32a104d75a0195dd686f00f533d65f22517121793689736b",
+        "optimization_gate.json": "df087d90f0c45fb1e31c4a24cb88da35255f2b5113a1443a91b72605e9ad6d02",
+        "provenance.json": "a57fe4f8b619be07a8a068619f29b1c7d473d52029d60bc61d14c32fafa0e6a3",
+        "result.json": "88755764d99946dee33b1ff5568c16dc8d9fb405fd129600f293295a135e6a93",
+        "selected_task.pt": "de35d54f92fa7d280050a3b8045731d6e6690b5fa3791800b8ac7062c7335fdd",
+        "training.jsonl": "5b8a40362a928aaa4daf5f1394099d33c1965c932fbc6cb531469b7c73115197"
+      },
+      "checkpoint": null,
+      "cpu_memory": {
+        "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+        "gpu_memory_bytes": null,
+        "logical_cpus_reported_by_os": 9,
+        "method": "psutil single worker process RSS, 10 ms sampling plus endpoints",
+        "peak_observed_rss_bytes": 589938688,
+        "psutil_version": "7.2.2",
+        "ram_bytes_reported_by_os": 10451423232,
+        "rss_end_bytes": 581885952,
+        "rss_start_bytes": 421203968,
+        "samples": 15178
+      },
+      "encoder_final_sha256": "653ef804271d875bdb3170f3d6481796bf8fd0bf6717fdbff87f074c21f3c2b6",
+      "encoder_initial_sha256": "653ef804271d875bdb3170f3d6481796bf8fd0bf6717fdbff87f074c21f3c2b6",
+      "feature_audit": {
+        "adaptation_status": "PASS",
+        "first_training_feature_statistics": [
+          {
+            "mean": -0.08194393664598465,
+            "sd": 0.5096235275268555,
+            "shape": [
+              2,
+              16,
+              24,
+              24,
+              24
+            ]
+          },
+          {
+            "mean": 0.02380320243537426,
+            "sd": 0.5958265662193298,
+            "shape": [
+              2,
+              32,
+              12,
+              12,
+              12
+            ]
+          },
+          {
+            "mean": 0.037941448390483856,
+            "sd": 0.6005659103393555,
+            "shape": [
+              2,
+              64,
+              6,
+              6,
+              6
+            ]
+          },
+          {
+            "mean": -0.009524739347398281,
+            "sd": 0.6716552972793579,
+            "shape": [
+              2,
+              128,
+              3,
+              3,
+              3
+            ]
+          }
+        ],
+        "initial_group_sha256": {
+          "down": "de03b2023aadde0c56c14fce7e989b674378e8e39544939426075227e24a52c7",
+          "probe": "005accdcf3045c53588e60ab89513caa0fe577af1bebf7ce2f10d74e26cd8e12",
+          "up": "5db91edc7e92827ea0fe0e31fefe761fbf2b19a3d16c6a9477b1007461fe0496"
+        },
+        "initial_logits_sha256": "3fcf27fccca5a2d5e95d171444bb6ccd5aa94fd070c711494f5eb092cef040fe",
+        "mean_step_seconds": 0.03953577379842129,
+        "nonzero_gradient_groups": [
+          "down",
+          "probe",
+          "up"
+        ],
+        "nonzero_update_groups": [
+          "down",
+          "probe",
+          "up"
+        ],
+        "reloaded_logits_sha256": "4d6fcda6e366840d4b16dd4f21753190232c6efc80a8c984ccd1ef16336e92d0",
+        "selected_group_changed": {
+          "down": true,
+          "probe": true,
+          "up": true
+        },
+        "selected_group_sha256": {
+          "down": "27455d0e37154e31dde893453f7599f1f596f84e8566640b517b7012805c0fc5",
+          "probe": "caf9fe95da580da3e8bc08363b1a2fe0dcd03a57c21474350329751eda85d146",
+          "up": "ce9ca93676003a5540595e7f6ad17ad30516c4a214b9f8ae803244ec7cc6dbca"
+        },
+        "selected_logits_sha256": "4d6fcda6e366840d4b16dd4f21753190232c6efc80a8c984ccd1ef16336e92d0",
+        "training_steps_seconds": 150.2359404340009,
+        "validation_seconds": 6.149061265999535,
+        "validation_trajectory": [
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.8552022114229699,
+            "predicted_foreground_fraction_pooled": 0.018216975371463464,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 200,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9152802144448342,
+            "predicted_foreground_fraction_pooled": 0.020812131080806026,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 400,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9369642215492018,
+            "predicted_foreground_fraction_pooled": 0.02025239161408508,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 600,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9408778124275148,
+            "predicted_foreground_fraction_pooled": 0.020150620801954,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.937223628044884,
+            "predicted_foreground_fraction_pooled": 0.02035416242621616,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1000,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9367284348341538,
+            "predicted_foreground_fraction_pooled": 0.020150620801954,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1200,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9390431702684667,
+            "predicted_foreground_fraction_pooled": 0.02025239161408508,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1400,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9426229508196722,
+            "predicted_foreground_fraction_pooled": 0.020557704050478322,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1600,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9435336976320583,
+            "predicted_foreground_fraction_pooled": 0.020506818644412783,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9426229508196722,
+            "predicted_foreground_fraction_pooled": 0.020557704050478322,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2000,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9403292181069959,
+            "predicted_foreground_fraction_pooled": 0.02045593323834724,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2200,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9403292181069959,
+            "predicted_foreground_fraction_pooled": 0.02045593323834724,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2400,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9403292181069959,
+            "predicted_foreground_fraction_pooled": 0.02045593323834724,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2600,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9403292181069959,
+            "predicted_foreground_fraction_pooled": 0.02045593323834724,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9403292181069959,
+            "predicted_foreground_fraction_pooled": 0.02045593323834724,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 3000,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9403292181069959,
+            "predicted_foreground_fraction_pooled": 0.02045593323834724,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 3200,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9403292181069959,
+            "predicted_foreground_fraction_pooled": 0.02045593323834724,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 3400,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9403292181069959,
+            "predicted_foreground_fraction_pooled": 0.02045593323834724,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 3600,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9403292181069959,
+            "predicted_foreground_fraction_pooled": 0.02045593323834724,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 3800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9435336976320583,
+            "predicted_foreground_fraction_pooled": 0.020506818644412783,
+            "reader_targets": 4,
+            "selected_replay": true,
+            "step": 1800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          }
+        ]
+      },
+      "head_initial_sha256": "005accdcf3045c53588e60ab89513caa0fe577af1bebf7ce2f10d74e26cd8e12",
+      "optimization_diagnostics": {
+        "all_validation_predictions_empty": false,
+        "all_validation_predictions_full": false,
+        "budget_exhausted_without_patience_plateau": false,
+        "checkpoint_selection_complete": true,
+        "final_validation_complete": true,
+        "minimum_steps_satisfied": true,
+        "numerically_finite": true,
+        "patient_exposure_balanced": true,
+        "unvisited_training_patients": 0,
+        "unvisited_training_targets": 0,
+        "zero_validation_overlap": false
+      },
+      "optimizer_parameters": [
+        "head.down.weight",
+        "head.probe.bias",
+        "head.probe.projections.0.weight",
+        "head.probe.projections.1.weight",
+        "head.probe.projections.2.weight",
+        "head.probe.projections.3.weight",
+        "head.up.weight"
+      ],
+      "parameter_budget": {
+        "adapter_parameters": 128,
+        "added_parameters": 128,
+        "encoder_parameters": 4399344,
+        "frozen_parameters": 4399344,
+        "probe_parameters": 241,
+        "total_parameters": 4399713,
+        "trainable_parameters": 369,
+        "trainable_percentage": 0.008386910691674663
+      },
+      "selected_step": 1800,
+      "steps": 3800,
+      "stopping_reason": "validation_early_stopping",
+      "test_reads": 0,
+      "training_first": {
+        "empty_prediction_fraction": 0.0,
+        "gradient_l2_before_clip": {
+          "down": 0.0,
+          "probe": 3.7253611087799072,
+          "up": 0.029873844236135483
+        },
+        "loss": 1.788797378540039,
+        "mean_probability_off_target": 0.5555444955825806,
+        "mean_probability_on_target": 0.8301888704299927,
+        "parameter_update_l2": {
+          "down": 0.0,
+          "probe": 0.015523332171142101,
+          "up": 0.007999866269528866
+        },
+        "predicted_foreground_fraction": 0.6674129962921143,
+        "step": 1,
+        "step_seconds": 0.08785389900003793,
+        "target_foreground_fraction": 0.016486871987581253
+      },
+      "training_last": {
+        "empty_prediction_fraction": 0.0,
+        "gradient_l2_before_clip": {
+          "down": 0.0005416175117716193,
+          "probe": 0.0008816882618702948,
+          "up": 0.00021599461615551263
+        },
+        "loss": 0.0003105064097326249,
+        "mean_probability_off_target": 4.517178240348585e-06,
+        "mean_probability_on_target": 0.9996681809425354,
+        "parameter_update_l2": {
+          "down": 0.00032395351445302367,
+          "probe": 0.00018010265193879604,
+          "up": 0.00037354056257754564
+        },
+        "predicted_foreground_fraction": 0.016486871987581253,
+        "step": 3800,
+        "step_seconds": 0.05170786799999405,
+        "target_foreground_fraction": 0.016486871987581253
+      },
+      "validation_counts": {
+        "empty_predictions": 0,
+        "fully_defined_hd95_patients": 2,
+        "patients": 2,
+        "reader_targets": 4,
+        "undefined_hd95_targets": 0
+      },
+      "validation_patient_macro": {
+        "absolute_volume_error_mm3": 1.25,
+        "dice": 0.9435336976320583,
+        "empty_prediction_rate": 0.0,
+        "hd95_mm": 0.5,
+        "voxel_sensitivity": 0.9390243902439024
+      }
+    },
+    "random_frozen": {
+      "adequacy": "PASSED",
+      "adequacy_reason": null,
+      "artifact_sha256": {
+        "COMPLETED.json": "bccec33919cc6c4b7865c27121ee52d1104be121d780cfcc8efedd6156fcb0a3",
+        "checkpoint_lock.json": "87501bf4f40bf754b8b3c05bdc2aa066223796fb5f7b89bedaf24d5fe2b9d467",
+        "optimization_gate.json": "df087d90f0c45fb1e31c4a24cb88da35255f2b5113a1443a91b72605e9ad6d02",
+        "provenance.json": "fc0d2f4a53130f8731676155ea70b7ed659bad352c25d6c9281d013d789ece15",
+        "result.json": "a9a2f18021bbcfbadb1479facb9be63a286d8d888df95910d4baa4e0dbd0af1f",
+        "selected_task.pt": "96121a58b7854bc2167b5bd2cca261e8a7e0ae87dd1036450f727deaf1eee312",
+        "training.jsonl": "9159d7690268cf28ce924e3f71f2a07e9a7ddcb1b7dbc0f9b049abe907907876"
+      },
+      "checkpoint": null,
+      "cpu_memory": {
+        "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+        "gpu_memory_bytes": null,
+        "logical_cpus_reported_by_os": 9,
+        "method": "psutil single worker process RSS, 10 ms sampling plus endpoints",
+        "peak_observed_rss_bytes": 585732096,
+        "psutil_version": "7.2.2",
+        "ram_bytes_reported_by_os": 10451423232,
+        "rss_end_bytes": 579616768,
+        "rss_start_bytes": 423895040,
+        "samples": 21067
+      },
+      "encoder_final_sha256": "653ef804271d875bdb3170f3d6481796bf8fd0bf6717fdbff87f074c21f3c2b6",
+      "encoder_initial_sha256": "653ef804271d875bdb3170f3d6481796bf8fd0bf6717fdbff87f074c21f3c2b6",
+      "feature_audit": {
+        "adaptation_status": "PASS",
+        "first_training_feature_statistics": [
+          {
+            "mean": -0.08194393664598465,
+            "sd": 0.5096235275268555,
+            "shape": [
+              2,
+              16,
+              24,
+              24,
+              24
+            ]
+          },
+          {
+            "mean": 0.02380320243537426,
+            "sd": 0.5958265662193298,
+            "shape": [
+              2,
+              32,
+              12,
+              12,
+              12
+            ]
+          },
+          {
+            "mean": 0.037941448390483856,
+            "sd": 0.6005659103393555,
+            "shape": [
+              2,
+              64,
+              6,
+              6,
+              6
+            ]
+          },
+          {
+            "mean": -0.009524739347398281,
+            "sd": 0.6716552972793579,
+            "shape": [
+              2,
+              128,
+              3,
+              3,
+              3
+            ]
+          }
+        ],
+        "initial_group_sha256": {
+          "probe": "005accdcf3045c53588e60ab89513caa0fe577af1bebf7ce2f10d74e26cd8e12"
+        },
+        "initial_logits_sha256": "3fcf27fccca5a2d5e95d171444bb6ccd5aa94fd070c711494f5eb092cef040fe",
+        "mean_step_seconds": 0.036048180806722105,
+        "nonzero_gradient_groups": [
+          "probe"
+        ],
+        "nonzero_update_groups": [
+          "probe"
+        ],
+        "reloaded_logits_sha256": "eb4fa42bc053f031c69bc6605a173697a8790efeb09bca6867aa00a3e2635ee6",
+        "selected_group_changed": {
+          "probe": true
+        },
+        "selected_group_sha256": {
+          "probe": "87a9b3a9384f309705f6b2f2ca69bb59b421de41731675d42cab09954c0cd5b6"
+        },
+        "selected_logits_sha256": "eb4fa42bc053f031c69bc6605a173697a8790efeb09bca6867aa00a3e2635ee6",
+        "training_steps_seconds": 209.07944867898823,
+        "validation_seconds": 8.225671362000867,
+        "validation_trajectory": [
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.7078383191645788,
+            "predicted_foreground_fraction_pooled": 0.013688174231630369,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 200,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.8740623534927332,
+            "predicted_foreground_fraction_pooled": 0.01730103806228374,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 400,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9101297149684247,
+            "predicted_foreground_fraction_pooled": 0.01755546509261144,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 600,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9107558139534884,
+            "predicted_foreground_fraction_pooled": 0.017402808874414817,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9217341372380132,
+            "predicted_foreground_fraction_pooled": 0.017606350498676978,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1000,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9221661601972364,
+            "predicted_foreground_fraction_pooled": 0.017606350498676978,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1200,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9208169434011326,
+            "predicted_foreground_fraction_pooled": 0.01755546509261144,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1400,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9221661601972364,
+            "predicted_foreground_fraction_pooled": 0.017606350498676978,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1600,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9236999025285247,
+            "predicted_foreground_fraction_pooled": 0.01755546509261144,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9225352112676056,
+            "predicted_foreground_fraction_pooled": 0.017402808874414817,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2000,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9225352112676056,
+            "predicted_foreground_fraction_pooled": 0.017402808874414817,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2200,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9225352112676056,
+            "predicted_foreground_fraction_pooled": 0.017402808874414817,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2400,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9225352112676056,
+            "predicted_foreground_fraction_pooled": 0.017402808874414817,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2600,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9225352112676056,
+            "predicted_foreground_fraction_pooled": 0.017402808874414817,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9225352112676056,
+            "predicted_foreground_fraction_pooled": 0.017402808874414817,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 3000,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9225352112676056,
+            "predicted_foreground_fraction_pooled": 0.017402808874414817,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 3200,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9225352112676056,
+            "predicted_foreground_fraction_pooled": 0.017402808874414817,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 3400,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9238844280637093,
+            "predicted_foreground_fraction_pooled": 0.01745369428048036,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 3600,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9252336448598131,
+            "predicted_foreground_fraction_pooled": 0.0175045796865459,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 3800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9252336448598131,
+            "predicted_foreground_fraction_pooled": 0.0175045796865459,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 4000,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9252336448598131,
+            "predicted_foreground_fraction_pooled": 0.0175045796865459,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 4200,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9238844280637093,
+            "predicted_foreground_fraction_pooled": 0.01745369428048036,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 4400,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9238844280637093,
+            "predicted_foreground_fraction_pooled": 0.01745369428048036,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 4600,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9225352112676056,
+            "predicted_foreground_fraction_pooled": 0.017402808874414817,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 4800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9225352112676056,
+            "predicted_foreground_fraction_pooled": 0.017402808874414817,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 5000,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9225352112676056,
+            "predicted_foreground_fraction_pooled": 0.017402808874414817,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 5200,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9225352112676056,
+            "predicted_foreground_fraction_pooled": 0.017402808874414817,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 5400,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9225352112676056,
+            "predicted_foreground_fraction_pooled": 0.017402808874414817,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 5600,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9225352112676056,
+            "predicted_foreground_fraction_pooled": 0.017402808874414817,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 5800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9252336448598131,
+            "predicted_foreground_fraction_pooled": 0.0175045796865459,
+            "reader_targets": 4,
+            "selected_replay": true,
+            "step": 3800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          }
+        ]
+      },
+      "head_initial_sha256": "005accdcf3045c53588e60ab89513caa0fe577af1bebf7ce2f10d74e26cd8e12",
+      "optimization_diagnostics": {
+        "all_validation_predictions_empty": false,
+        "all_validation_predictions_full": false,
+        "budget_exhausted_without_patience_plateau": false,
+        "checkpoint_selection_complete": true,
+        "final_validation_complete": true,
+        "minimum_steps_satisfied": true,
+        "numerically_finite": true,
+        "patient_exposure_balanced": true,
+        "unvisited_training_patients": 0,
+        "unvisited_training_targets": 0,
+        "zero_validation_overlap": false
+      },
+      "optimizer_parameters": [
+        "head.bias",
+        "head.projections.0.weight",
+        "head.projections.1.weight",
+        "head.projections.2.weight",
+        "head.projections.3.weight"
+      ],
+      "parameter_budget": {
+        "adapter_parameters": 0,
+        "added_parameters": 0,
+        "encoder_parameters": 4399344,
+        "frozen_parameters": 4399344,
+        "probe_parameters": 241,
+        "total_parameters": 4399585,
+        "trainable_parameters": 241,
+        "trainable_percentage": 0.005477789382407659
+      },
+      "selected_step": 3800,
+      "steps": 5800,
+      "stopping_reason": "validation_early_stopping",
+      "test_reads": 0,
+      "training_first": {
+        "empty_prediction_fraction": 0.0,
+        "gradient_l2_before_clip": {
+          "probe": 3.7253611087799072
+        },
+        "loss": 1.788797378540039,
+        "mean_probability_off_target": 0.5555444955825806,
+        "mean_probability_on_target": 0.8301888704299927,
+        "parameter_update_l2": {
+          "probe": 0.015523332171142101
+        },
+        "predicted_foreground_fraction": 0.6674129962921143,
+        "step": 1,
+        "step_seconds": 0.0563822839999375,
+        "target_foreground_fraction": 0.016486871987581253
+      },
+      "training_last": {
+        "empty_prediction_fraction": 0.0,
+        "gradient_l2_before_clip": {
+          "probe": 0.00361306918784976
+        },
+        "loss": 0.007301182486116886,
+        "mean_probability_off_target": 0.00012222940858919173,
+        "mean_probability_on_target": 0.9931608438491821,
+        "parameter_update_l2": {
+          "probe": 0.0014999951235949993
+        },
+        "predicted_foreground_fraction": 0.016486871987581253,
+        "step": 5800,
+        "step_seconds": 0.028281332000005932,
+        "target_foreground_fraction": 0.016486871987581253
+      },
+      "validation_counts": {
+        "empty_predictions": 0,
+        "fully_defined_hd95_patients": 2,
+        "patients": 2,
+        "reader_targets": 4,
+        "undefined_hd95_targets": 0
+      },
+      "validation_patient_macro": {
+        "absolute_volume_error_mm3": 16.0,
+        "dice": 0.9252336448598131,
+        "empty_prediction_rate": 0.0,
+        "hd95_mm": 0.5,
+        "voxel_sensitivity": 0.8699186991869918
+      }
+    },
+    "suprem_feature": {
+      "adequacy": "PASSED",
+      "adequacy_reason": null,
+      "artifact_sha256": {
+        "COMPLETED.json": "62cc64e71ba4628f41d6b27ba6b6e4c7bcab9630cdec25c1df1d7ce62d38e62a",
+        "checkpoint_lock.json": "57d49f965730f520d76e324b20d6cb721efef99e3d00cccdbf1cf27df3f395bf",
+        "optimization_gate.json": "df087d90f0c45fb1e31c4a24cb88da35255f2b5113a1443a91b72605e9ad6d02",
+        "provenance.json": "46ce2a60b3248691ad0c90296f9e5eb653bd27be79b8fca7a7bb000cfdef3a95",
+        "result.json": "666ba93dfc3a080601c3a86d4c9f66dc64163a5d2737143e4da76e565e287927",
+        "selected_task.pt": "0a76a1c6f398c820944d04f730d718b8e6ac892e9192b643b46accecca3474c0",
+        "training.jsonl": "3e32d9eac725859498759f2c59fe725a9b9f121e8e0fcf7888577529e74ecf42"
+      },
+      "checkpoint": {
+        "checkpoint_sha256": "2db81dc05cd9ea7234ca75e921e53e32b8716dc4cba88a6710742bfc282589a3",
+        "checkpoint_size_bytes": 56500623,
+        "encoder_tensor_count": 58,
+        "encoder_tensor_coverage": 1.0,
+        "verified_load_seconds": 0.4233967529999063
+      },
+      "cpu_memory": {
+        "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+        "gpu_memory_bytes": null,
+        "logical_cpus_reported_by_os": 9,
+        "method": "psutil single worker process RSS, 10 ms sampling plus endpoints",
+        "peak_observed_rss_bytes": 635465728,
+        "psutil_version": "7.2.2",
+        "ram_bytes_reported_by_os": 10451423232,
+        "rss_end_bytes": 634966016,
+        "rss_start_bytes": 423915520,
+        "samples": 10542
+      },
+      "encoder_final_sha256": "334343192f91d8f7be5282c5c25e713b42973a9127bdf5e46b1dbe614adb9d00",
+      "encoder_initial_sha256": "334343192f91d8f7be5282c5c25e713b42973a9127bdf5e46b1dbe614adb9d00",
+      "feature_audit": {
+        "adaptation_status": "PASS",
+        "first_training_feature_statistics": [
+          {
+            "mean": -0.12647858262062073,
+            "sd": 0.5564600825309753,
+            "shape": [
+              2,
+              16,
+              24,
+              24,
+              24
+            ]
+          },
+          {
+            "mean": -0.012995470315217972,
+            "sd": 0.799363911151886,
+            "shape": [
+              2,
+              32,
+              12,
+              12,
+              12
+            ]
+          },
+          {
+            "mean": 0.09327643364667892,
+            "sd": 0.9218885898590088,
+            "shape": [
+              2,
+              64,
+              6,
+              6,
+              6
+            ]
+          },
+          {
+            "mean": 0.856793999671936,
+            "sd": 2.1966147422790527,
+            "shape": [
+              2,
+              128,
+              3,
+              3,
+              3
+            ]
+          }
+        ],
+        "initial_group_sha256": {
+          "down": "de03b2023aadde0c56c14fce7e989b674378e8e39544939426075227e24a52c7",
+          "probe": "005accdcf3045c53588e60ab89513caa0fe577af1bebf7ce2f10d74e26cd8e12",
+          "up": "5db91edc7e92827ea0fe0e31fefe761fbf2b19a3d16c6a9477b1007461fe0496"
+        },
+        "initial_logits_sha256": "83c51fa871366e118cb7abd3efbd186db9828339e61cb0c881f81883d1a84a75",
+        "mean_step_seconds": 0.03966574183423203,
+        "nonzero_gradient_groups": [
+          "down",
+          "probe",
+          "up"
+        ],
+        "nonzero_update_groups": [
+          "down",
+          "probe",
+          "up"
+        ],
+        "reloaded_logits_sha256": "70733802b59ecd6935b7e2201ebd5abc6b3dcb800c99493ec75d3382dc0e383f",
+        "selected_group_changed": {
+          "down": true,
+          "probe": true,
+          "up": true
+        },
+        "selected_group_sha256": {
+          "down": "10d64921ab1d5be89100b0f9eb9ac4fb7abdab761d082f1ebf40c43ac0555d94",
+          "probe": "fc896950086560960f988021eb6daeea91cd8d777517306e65a336ee06454da5",
+          "up": "382cb63d8a7a9fd5d70ea5de91664cbc99e01f744be14356d5103d7268123724"
+        },
+        "selected_logits_sha256": "70733802b59ecd6935b7e2201ebd5abc6b3dcb800c99493ec75d3382dc0e383f",
+        "training_steps_seconds": 103.13092876900328,
+        "validation_seconds": 3.9091700430003584,
+        "validation_trajectory": [
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9897119341563786,
+            "predicted_foreground_fraction_pooled": 0.02045593323834724,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 200,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9918032786885246,
+            "predicted_foreground_fraction_pooled": 0.020557704050478322,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 400,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9938775510204081,
+            "predicted_foreground_fraction_pooled": 0.020659474862609405,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 600,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9938775510204081,
+            "predicted_foreground_fraction_pooled": 0.020659474862609405,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9938775510204081,
+            "predicted_foreground_fraction_pooled": 0.020659474862609405,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1000,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9938775510204081,
+            "predicted_foreground_fraction_pooled": 0.020659474862609405,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1200,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9938775510204081,
+            "predicted_foreground_fraction_pooled": 0.020659474862609405,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1400,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9938775510204081,
+            "predicted_foreground_fraction_pooled": 0.020659474862609405,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1600,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9938775510204081,
+            "predicted_foreground_fraction_pooled": 0.020659474862609405,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9938775510204081,
+            "predicted_foreground_fraction_pooled": 0.020659474862609405,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2000,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9938775510204081,
+            "predicted_foreground_fraction_pooled": 0.020659474862609405,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2200,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9938775510204081,
+            "predicted_foreground_fraction_pooled": 0.020659474862609405,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2400,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9938775510204081,
+            "predicted_foreground_fraction_pooled": 0.020659474862609405,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2600,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9938775510204081,
+            "predicted_foreground_fraction_pooled": 0.020659474862609405,
+            "reader_targets": 4,
+            "selected_replay": true,
+            "step": 600,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          }
+        ]
+      },
+      "head_initial_sha256": "005accdcf3045c53588e60ab89513caa0fe577af1bebf7ce2f10d74e26cd8e12",
+      "optimization_diagnostics": {
+        "all_validation_predictions_empty": false,
+        "all_validation_predictions_full": false,
+        "budget_exhausted_without_patience_plateau": false,
+        "checkpoint_selection_complete": true,
+        "final_validation_complete": true,
+        "minimum_steps_satisfied": true,
+        "numerically_finite": true,
+        "patient_exposure_balanced": true,
+        "unvisited_training_patients": 0,
+        "unvisited_training_targets": 0,
+        "zero_validation_overlap": false
+      },
+      "optimizer_parameters": [
+        "head.down.weight",
+        "head.probe.bias",
+        "head.probe.projections.0.weight",
+        "head.probe.projections.1.weight",
+        "head.probe.projections.2.weight",
+        "head.probe.projections.3.weight",
+        "head.up.weight"
+      ],
+      "parameter_budget": {
+        "adapter_parameters": 128,
+        "added_parameters": 128,
+        "encoder_parameters": 4399344,
+        "frozen_parameters": 4399344,
+        "probe_parameters": 241,
+        "total_parameters": 4399713,
+        "trainable_parameters": 369,
+        "trainable_percentage": 0.008386910691674663
+      },
+      "selected_step": 600,
+      "steps": 2600,
+      "stopping_reason": "validation_early_stopping",
+      "test_reads": 0,
+      "training_first": {
+        "empty_prediction_fraction": 0.0,
+        "gradient_l2_before_clip": {
+          "down": 0.0,
+          "probe": 11.88587760925293,
+          "up": 0.17032912373542786
+        },
+        "loss": 1.861382007598877,
+        "mean_probability_off_target": 0.5540897250175476,
+        "mean_probability_on_target": 0.7369986772537231,
+        "parameter_update_l2": {
+          "down": 0.0,
+          "probe": 0.015524178743362427,
+          "up": 0.007999744266271591
+        },
+        "predicted_foreground_fraction": 0.590677797794342,
+        "step": 1,
+        "step_seconds": 0.08401738000020487,
+        "target_foreground_fraction": 0.016486871987581253
+      },
+      "training_last": {
+        "empty_prediction_fraction": 0.0,
+        "gradient_l2_before_clip": {
+          "down": 0.00030938262352719903,
+          "probe": 0.0008188654901459813,
+          "up": 0.00028324563754722476
+        },
+        "loss": 0.00021076023404020816,
+        "mean_probability_off_target": 3.2973509860312333e-06,
+        "mean_probability_on_target": 0.9997886419296265,
+        "parameter_update_l2": {
+          "down": 0.0003055704291909933,
+          "probe": 0.00010398167796665803,
+          "up": 0.0002553303784225136
+        },
+        "predicted_foreground_fraction": 0.016486871987581253,
+        "step": 2600,
+        "step_seconds": 0.04978680199974406,
+        "target_foreground_fraction": 0.016486871987581253
+      },
+      "validation_counts": {
+        "empty_predictions": 0,
+        "fully_defined_hd95_patients": 2,
+        "patients": 2,
+        "reader_targets": 4,
+        "undefined_hd95_targets": 0
+      },
+      "validation_patient_macro": {
+        "absolute_volume_error_mm3": 0.5,
+        "dice": 0.9938775510204081,
+        "empty_prediction_rate": 0.0,
+        "hd95_mm": 0.0,
+        "voxel_sensitivity": 0.9918699186991871
+      }
+    },
+    "suprem_frozen": {
+      "adequacy": "PASSED",
+      "adequacy_reason": null,
+      "artifact_sha256": {
+        "COMPLETED.json": "2c9c894fbd1b919f0d2c6de22b53da581570e348c5698ab910a499830a54b413",
+        "checkpoint_lock.json": "236adb9d5243814d4ac32dc311ee24bc91fff3d18bad64fc3ff0dc1e83d2bed6",
+        "optimization_gate.json": "df087d90f0c45fb1e31c4a24cb88da35255f2b5113a1443a91b72605e9ad6d02",
+        "provenance.json": "5e61770450a8f50092e28c09b8179a2d0cdda7ba5759dfe9232209d4d06535b6",
+        "result.json": "99f88c90c74efe6d8ea0b69198c4be58e1361eaa23edde71155fc09291b6cdbc",
+        "selected_task.pt": "28ecaf609f145ba31f97a1946ea0e360823ab1c32217ffd7ee3ca03fc69d12ba",
+        "training.jsonl": "79f316295b43daae3a614b1e9cc2cda247e42d73677d52cb30ea1fb644ab50a3"
+      },
+      "checkpoint": {
+        "checkpoint_sha256": "2db81dc05cd9ea7234ca75e921e53e32b8716dc4cba88a6710742bfc282589a3",
+        "checkpoint_size_bytes": 56500623,
+        "encoder_tensor_count": 58,
+        "encoder_tensor_coverage": 1.0,
+        "verified_load_seconds": 0.3759776030001376
+      },
+      "cpu_memory": {
+        "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+        "gpu_memory_bytes": null,
+        "logical_cpus_reported_by_os": 9,
+        "method": "psutil single worker process RSS, 10 ms sampling plus endpoints",
+        "peak_observed_rss_bytes": 633982976,
+        "psutil_version": "7.2.2",
+        "ram_bytes_reported_by_os": 10451423232,
+        "rss_end_bytes": 633962496,
+        "rss_start_bytes": 424529920,
+        "samples": 9487
+      },
+      "encoder_final_sha256": "334343192f91d8f7be5282c5c25e713b42973a9127bdf5e46b1dbe614adb9d00",
+      "encoder_initial_sha256": "334343192f91d8f7be5282c5c25e713b42973a9127bdf5e46b1dbe614adb9d00",
+      "feature_audit": {
+        "adaptation_status": "PASS",
+        "first_training_feature_statistics": [
+          {
+            "mean": -0.12647858262062073,
+            "sd": 0.5564600825309753,
+            "shape": [
+              2,
+              16,
+              24,
+              24,
+              24
+            ]
+          },
+          {
+            "mean": -0.012995470315217972,
+            "sd": 0.799363911151886,
+            "shape": [
+              2,
+              32,
+              12,
+              12,
+              12
+            ]
+          },
+          {
+            "mean": 0.09327643364667892,
+            "sd": 0.9218885898590088,
+            "shape": [
+              2,
+              64,
+              6,
+              6,
+              6
+            ]
+          },
+          {
+            "mean": 0.856793999671936,
+            "sd": 2.1966147422790527,
+            "shape": [
+              2,
+              128,
+              3,
+              3,
+              3
+            ]
+          }
+        ],
+        "initial_group_sha256": {
+          "probe": "005accdcf3045c53588e60ab89513caa0fe577af1bebf7ce2f10d74e26cd8e12"
+        },
+        "initial_logits_sha256": "83c51fa871366e118cb7abd3efbd186db9828339e61cb0c881f81883d1a84a75",
+        "mean_step_seconds": 0.03266992914750306,
+        "nonzero_gradient_groups": [
+          "probe"
+        ],
+        "nonzero_update_groups": [
+          "probe"
+        ],
+        "reloaded_logits_sha256": "b93c8c6eef5c61655db348cd1a0234b45bf2d38f8edcc1b218a32e4dc6e90ec7",
+        "selected_group_changed": {
+          "probe": true
+        },
+        "selected_group_sha256": {
+          "probe": "26f2259b6a69a45724f47fae5a56bcd35e8e2d0348e4ea9141266c589704b436"
+        },
+        "selected_logits_sha256": "b93c8c6eef5c61655db348cd1a0234b45bf2d38f8edcc1b218a32e4dc6e90ec7",
+        "training_steps_seconds": 91.47580161300857,
+        "validation_seconds": 4.713137179001478,
+        "validation_trajectory": [
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9588663490874056,
+            "predicted_foreground_fraction_pooled": 0.019438225117036433,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 200,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.98559670781893,
+            "predicted_foreground_fraction_pooled": 0.02045593323834724,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 400,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.98559670781893,
+            "predicted_foreground_fraction_pooled": 0.02045593323834724,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 600,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9877049180327868,
+            "predicted_foreground_fraction_pooled": 0.020557704050478322,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9877049180327868,
+            "predicted_foreground_fraction_pooled": 0.020557704050478322,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1000,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9877049180327868,
+            "predicted_foreground_fraction_pooled": 0.020557704050478322,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1200,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9877049180327868,
+            "predicted_foreground_fraction_pooled": 0.020557704050478322,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1400,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9877049180327868,
+            "predicted_foreground_fraction_pooled": 0.020557704050478322,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1600,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9877049180327868,
+            "predicted_foreground_fraction_pooled": 0.020557704050478322,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 1800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9877049180327868,
+            "predicted_foreground_fraction_pooled": 0.020557704050478322,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2000,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9877049180327868,
+            "predicted_foreground_fraction_pooled": 0.020557704050478322,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2200,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9877049180327868,
+            "predicted_foreground_fraction_pooled": 0.020557704050478322,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2400,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9877049180327868,
+            "predicted_foreground_fraction_pooled": 0.020557704050478322,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2600,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9877049180327868,
+            "predicted_foreground_fraction_pooled": 0.020557704050478322,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 2800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.9877049180327868,
+            "predicted_foreground_fraction_pooled": 0.020557704050478322,
+            "reader_targets": 4,
+            "selected_replay": true,
+            "step": 800,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          }
+        ]
+      },
+      "head_initial_sha256": "005accdcf3045c53588e60ab89513caa0fe577af1bebf7ce2f10d74e26cd8e12",
+      "optimization_diagnostics": {
+        "all_validation_predictions_empty": false,
+        "all_validation_predictions_full": false,
+        "budget_exhausted_without_patience_plateau": false,
+        "checkpoint_selection_complete": true,
+        "final_validation_complete": true,
+        "minimum_steps_satisfied": true,
+        "numerically_finite": true,
+        "patient_exposure_balanced": true,
+        "unvisited_training_patients": 0,
+        "unvisited_training_targets": 0,
+        "zero_validation_overlap": false
+      },
+      "optimizer_parameters": [
+        "head.bias",
+        "head.projections.0.weight",
+        "head.projections.1.weight",
+        "head.projections.2.weight",
+        "head.projections.3.weight"
+      ],
+      "parameter_budget": {
+        "adapter_parameters": 0,
+        "added_parameters": 0,
+        "encoder_parameters": 4399344,
+        "frozen_parameters": 4399344,
+        "probe_parameters": 241,
+        "total_parameters": 4399585,
+        "trainable_parameters": 241,
+        "trainable_percentage": 0.005477789382407659
+      },
+      "selected_step": 800,
+      "steps": 2800,
+      "stopping_reason": "validation_early_stopping",
+      "test_reads": 0,
+      "training_first": {
+        "empty_prediction_fraction": 0.0,
+        "gradient_l2_before_clip": {
+          "probe": 11.88587760925293
+        },
+        "loss": 1.861382007598877,
+        "mean_probability_off_target": 0.5540897250175476,
+        "mean_probability_on_target": 0.7369986772537231,
+        "parameter_update_l2": {
+          "probe": 0.015524177812039852
+        },
+        "predicted_foreground_fraction": 0.590677797794342,
+        "step": 1,
+        "step_seconds": 0.06034172999989096,
+        "target_foreground_fraction": 0.016486871987581253
+      },
+      "training_last": {
+        "empty_prediction_fraction": 0.0,
+        "gradient_l2_before_clip": {
+          "probe": 0.00823923572897911
+        },
+        "loss": 0.008063008077442646,
+        "mean_probability_off_target": 0.0001308357168454677,
+        "mean_probability_on_target": 0.9922061562538147,
+        "parameter_update_l2": {
+          "probe": 0.0007858305471017957
+        },
+        "predicted_foreground_fraction": 0.016486871987581253,
+        "step": 2800,
+        "step_seconds": 0.030100221000338934,
+        "target_foreground_fraction": 0.016486871987581253
+      },
+      "validation_counts": {
+        "empty_predictions": 0,
+        "fully_defined_hd95_patients": 2,
+        "patients": 2,
+        "reader_targets": 4,
+        "undefined_hd95_targets": 0
+      },
+      "validation_patient_macro": {
+        "absolute_volume_error_mm3": 1.0,
+        "dice": 0.9877049180327868,
+        "empty_prediction_rate": 0.0,
+        "hd95_mm": 0.5,
+        "voxel_sensitivity": 0.983739837398374
+      }
+    }
+  },
+  "baseline_configuration": {
+    "data": {
+      "budgets": [
+        1,
+        5,
+        10,
+        20
+      ],
+      "nested_support": true,
+      "test_fraction": 0.2,
+      "unit": "patient",
+      "validation_fraction": 0.2
+    },
+    "evaluation": {
+      "hd95_undefined_policy": "null_with_counts",
+      "metrics": [
+        "dice",
+        "hd95_mm",
+        "absolute_volume_error_mm3",
+        "voxel_sensitivity",
+        "empty_prediction"
+      ],
+      "selection_metric": "patient_macro_dice",
+      "selection_tie_break": "earliest_step",
+      "test_use": "once_after_optimization_adequacy",
+      "threshold": 0.5
+    },
+    "model": {
+      "architecture": "SegResNet",
+      "blocks_down": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "blocks_up": [
+        1,
+        1,
+        1
+      ],
+      "init_filters": 16,
+      "initialization": "random",
+      "norm_groups": 8,
+      "upsample_mode": "deconv"
+    },
+    "optimization": {
+      "batch_size": 2,
+      "ce_weight": 1.0,
+      "dice_weight": 1.0,
+      "gradient_clip_norm": 5.0,
+      "learning_rate": 0.001,
+      "loss": "DiceCELoss",
+      "max_steps": 8000,
+      "min_delta": 0.0005,
+      "min_steps": 2000,
+      "optimizer": "AdamW",
+      "patience": 10,
+      "validation_interval": 200,
+      "weight_decay": 1e-05
+    },
+    "reporting": {
+      "population_inference": false,
+      "seed_statistics": [
+        "mean",
+        "std",
+        "median",
+        "iqr",
+        "min",
+        "max"
+      ],
+      "seed_uncertainty": "stochastic_initialization_under_fixed_cohort"
+    },
+    "sampling": {
+      "flip_probability": 0.0,
+      "strategy": "patient-balanced-reader-rotation"
+    },
+    "schema_version": "1.0",
+    "seeds": {
+      "augmentation": 307,
+      "calibration": 997,
+      "loader": 401,
+      "model": [
+        17,
+        29,
+        43,
+        59,
+        71
+      ],
+      "partition": 101,
+      "smoke": 991,
+      "support": 211
+    },
+    "smoke": {
+      "max_steps": 12,
+      "min_steps": 4,
+      "patience": 2,
+      "validation_interval": 4
+    },
+    "task": "oracle-centred localized 3D pulmonary-nodule segmentation"
+  },
+  "candidate_index_sha256": "2eb56b7831ac44d35ae9a319caf795f72f209c99c35b7577f6ac4576af616ec3",
+  "clinical_performance_claimed": false,
+  "content_sha256": "5d351bd8e722d184dfc7bb640911be741d622fb9a7b87051337d9ca792e69c60",
+  "cpu_threads": 2,
+  "environment": {
+    "cuda_available": false,
+    "cuda_version": null,
+    "cudnn_version": null,
+    "device_name": null,
+    "git_commit": "ac780b88a9bc5ee0878a142fea01bc38a9d0c1df",
+    "monai_version": "1.6.0",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python_version": "3.12.14",
+    "pytorch_version": "2.13.0+cpu"
+  },
+  "external_transfer": "NOT RUN",
+  "feature_recipe": {
+    "adapter_seed": 1301,
+    "bottleneck": 4,
+    "feature_level": 0,
+    "method": "residual_pointwise_relu"
+  },
+  "head_seed": 997,
+  "implementation_sha256": "ffb580ab2e3d5aa617f41c8121b82a9e01b883da32808bdce3e188e7e6f63729",
+  "interpretation": "Descriptive differences use selection validation only.",
+  "k_patients": 1,
+  "official_checkpoint_revision": "46ab78c25b07ace573177ebffd02214f670c7e4f",
+  "official_model_id": "suprem-segresnet-2100",
+  "overlap_status": "NOT_ESTABLISHED",
+  "partition_sha256": "2c5dba6a18e2ed1c1dae4a7a49a05f9c9f19851bb7252c375604c152030930ae",
+  "phase": "calibration",
+  "preprocessing_sha256": "2149febfc6418e693ca4cf82f63ab257f2e84dee410a7e4539ddea83f4052c52",
+  "schema_version": "1.0",
+  "selected_validation_dice_difference_feature_minus_frozen": {
+    "random": 0.018300052772245223,
+    "suprem": 0.006172632987621274
+  },
+  "study": "paired CPU feature-output adaptation",
+  "support_reader_targets": 1,
+  "synthetic": true
+}

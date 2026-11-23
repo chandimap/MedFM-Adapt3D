@@ -1,0 +1,1064 @@
+{
+  "arms": {
+    "random_feature": {
+      "adequacy": "PASSED",
+      "adequacy_reason": null,
+      "artifact_sha256": {
+        "COMPLETED.json": "f0947eb9d67e02b609e3e855eac7c47c8df792e7f6dd95e78572ca117fe554a4",
+        "checkpoint_lock.json": "ff48a29cf45a0543be1dfb16f70c8cbae9ca76cb1c492fc27a260bf9ce78196e",
+        "optimization_gate.json": "df087d90f0c45fb1e31c4a24cb88da35255f2b5113a1443a91b72605e9ad6d02",
+        "provenance.json": "5855c84a441d76b27db3c6ff13053f509bf6596c7e3c80e5782b223b94b3f455",
+        "result.json": "5dd347c68d60804750293187e3540d172bbe830c34861e3865e215e879fcbb7f",
+        "selected_task.pt": "5eef5931e1bf1c901eba211c893473b4912cf810ae4f7874e8910499f0337b67",
+        "training.jsonl": "05412ceb7c2906029f4dea4dcfcc21fa0852e1e098782519dc3123263554a96d"
+      },
+      "checkpoint": null,
+      "cpu_memory": {
+        "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+        "gpu_memory_bytes": null,
+        "logical_cpus_reported_by_os": 9,
+        "method": "psutil single worker process RSS, 10 ms sampling plus endpoints",
+        "peak_observed_rss_bytes": 578392064,
+        "psutil_version": "7.2.2",
+        "ram_bytes_reported_by_os": 10451423232,
+        "rss_end_bytes": 578379776,
+        "rss_start_bytes": 425410560,
+        "samples": 242
+      },
+      "encoder_final_sha256": "653ef804271d875bdb3170f3d6481796bf8fd0bf6717fdbff87f074c21f3c2b6",
+      "encoder_initial_sha256": "653ef804271d875bdb3170f3d6481796bf8fd0bf6717fdbff87f074c21f3c2b6",
+      "feature_audit": {
+        "adaptation_status": "PASS",
+        "first_training_feature_statistics": [
+          {
+            "mean": -0.08194395154714584,
+            "sd": 0.5096234679222107,
+            "shape": [
+              1,
+              16,
+              24,
+              24,
+              24
+            ]
+          },
+          {
+            "mean": 0.023803194984793663,
+            "sd": 0.5958266258239746,
+            "shape": [
+              1,
+              32,
+              12,
+              12,
+              12
+            ]
+          },
+          {
+            "mean": 0.037941448390483856,
+            "sd": 0.6005659103393555,
+            "shape": [
+              1,
+              64,
+              6,
+              6,
+              6
+            ]
+          },
+          {
+            "mean": -0.00952474121004343,
+            "sd": 0.6716552972793579,
+            "shape": [
+              1,
+              128,
+              3,
+              3,
+              3
+            ]
+          }
+        ],
+        "initial_group_sha256": {
+          "down": "de03b2023aadde0c56c14fce7e989b674378e8e39544939426075227e24a52c7",
+          "probe": "1119b395654fad9747d10bbf2af0ad7a92815d251e0d1c9256eda86e6c5d6b6c",
+          "up": "5db91edc7e92827ea0fe0e31fefe761fbf2b19a3d16c6a9477b1007461fe0496"
+        },
+        "initial_logits_sha256": "6ce3c7f66a9b1579c1fedded4fb1db33d5deaaba9a8ba8ccf83227e9684b5745",
+        "mean_step_seconds": 0.04702269999999468,
+        "nonzero_gradient_groups": [
+          "down",
+          "probe",
+          "up"
+        ],
+        "nonzero_update_groups": [
+          "down",
+          "probe",
+          "up"
+        ],
+        "reloaded_logits_sha256": "c5ca38afa6b22c9d97a39e64e64c10f1fbc16e7ed812e4bf8235180f446dc421",
+        "selected_group_changed": {
+          "down": true,
+          "probe": true,
+          "up": true
+        },
+        "selected_group_sha256": {
+          "down": "a38f680750478fcf33937b6ca1e727d48fba9e702e205ae9a3bba955dab653fa",
+          "probe": "0bb6f6ab38cd7e95bbe64f5965586f503b8a3aa51a66ff5cfd9a6d2319dd37dc",
+          "up": "08e62782442d3f44a7933561e92bcae10d62a44d1a8adaf157e724d9fb14315f"
+        },
+        "selected_logits_sha256": "c5ca38afa6b22c9d97a39e64e64c10f1fbc16e7ed812e4bf8235180f446dc421",
+        "training_steps_seconds": 0.5642723999999362,
+        "validation_seconds": 0.9259137029998783,
+        "validation_trajectory": [
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.018281559640676515,
+            "predicted_foreground_fraction_pooled": 0.2698961937716263,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 4,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.011080601156625496,
+            "predicted_foreground_fraction_pooled": 0.10752086301648688,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 8,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.0,
+            "predicted_foreground_fraction_pooled": 0.02864848361489925,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 12,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.018281559640676515,
+            "predicted_foreground_fraction_pooled": 0.2698961937716263,
+            "reader_targets": 4,
+            "selected_replay": true,
+            "step": 4,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          }
+        ]
+      },
+      "head_initial_sha256": "1119b395654fad9747d10bbf2af0ad7a92815d251e0d1c9256eda86e6c5d6b6c",
+      "optimization_diagnostics": {
+        "all_validation_predictions_empty": false,
+        "all_validation_predictions_full": false,
+        "budget_exhausted_without_patience_plateau": false,
+        "checkpoint_selection_complete": true,
+        "final_validation_complete": true,
+        "minimum_steps_satisfied": true,
+        "numerically_finite": true,
+        "patient_exposure_balanced": true,
+        "unvisited_training_patients": 0,
+        "unvisited_training_targets": 0,
+        "zero_validation_overlap": false
+      },
+      "optimizer_parameters": [
+        "head.down.weight",
+        "head.probe.bias",
+        "head.probe.projections.0.weight",
+        "head.probe.projections.1.weight",
+        "head.probe.projections.2.weight",
+        "head.probe.projections.3.weight",
+        "head.up.weight"
+      ],
+      "parameter_budget": {
+        "adapter_parameters": 128,
+        "added_parameters": 128,
+        "encoder_parameters": 4399344,
+        "frozen_parameters": 4399344,
+        "probe_parameters": 241,
+        "total_parameters": 4399713,
+        "trainable_parameters": 369,
+        "trainable_percentage": 0.008386910691674663
+      },
+      "selected_step": 4,
+      "steps": 12,
+      "stopping_reason": "validation_early_stopping",
+      "test_reads": 0,
+      "training_first": {
+        "empty_prediction_fraction": 0.0,
+        "gradient_l2_before_clip": {
+          "down": 0.0,
+          "probe": 3.0854804515838623,
+          "up": 0.024416614323854446
+        },
+        "loss": 1.686105728149414,
+        "mean_probability_off_target": 0.4939282536506653,
+        "mean_probability_on_target": 0.4581605792045593,
+        "parameter_update_l2": {
+          "down": 0.0,
+          "probe": 0.015524175949394703,
+          "up": 0.007999742403626442
+        },
+        "predicted_foreground_fraction": 0.4746590554714203,
+        "step": 1,
+        "step_seconds": 0.07883485499996823,
+        "target_foreground_fraction": 0.016486871987581253
+      },
+      "training_last": {
+        "empty_prediction_fraction": 0.0,
+        "gradient_l2_before_clip": {
+          "down": 0.01026475802063942,
+          "probe": 1.7597397565841675,
+          "up": 0.02283170446753502
+        },
+        "loss": 1.373244285583496,
+        "mean_probability_off_target": 0.3042212426662445,
+        "mean_probability_on_target": 0.22512954473495483,
+        "parameter_update_l2": {
+          "down": 0.007832294330000877,
+          "probe": 0.01428876630961895,
+          "up": 0.007310322020202875
+        },
+        "predicted_foreground_fraction": 0.04803582280874252,
+        "step": 12,
+        "step_seconds": 0.040892210000038176,
+        "target_foreground_fraction": 0.016486871987581253
+      },
+      "validation_counts": {
+        "empty_predictions": 0,
+        "fully_defined_hd95_patients": 2,
+        "patients": 2,
+        "reader_targets": 4,
+        "undefined_hd95_targets": 0
+      },
+      "validation_patient_macro": {
+        "absolute_volume_error_mm3": 1224.0,
+        "dice": 0.018281559640676515,
+        "empty_prediction_rate": 0.0,
+        "hd95_mm": 9.561238288879395,
+        "voxel_sensitivity": 0.13309244203553147
+      }
+    },
+    "random_frozen": {
+      "adequacy": "PASSED",
+      "adequacy_reason": null,
+      "artifact_sha256": {
+        "COMPLETED.json": "b5d1b0d7d7c4525143f7e64b61c6acc1a63fd9d82d454d8b76e3944cd0471535",
+        "checkpoint_lock.json": "e40a36bdecf8df0b5f0efd6a34f3f292d21dadbb347ea1c51d9f97085f5397f4",
+        "optimization_gate.json": "df087d90f0c45fb1e31c4a24cb88da35255f2b5113a1443a91b72605e9ad6d02",
+        "provenance.json": "30f16bf95ea89f85ac1b543a90a072c486d150ac85a07f58be15d7e4a7fd479b",
+        "result.json": "d350a09eb0d6970bf87d1f8727865dd710f5dd3f60780742c9128543fa19b5c1",
+        "selected_task.pt": "b1ecaa0cf9aa62e807e72df24ba3f6b3d9064924819c9c71fa9467ce9126be32",
+        "training.jsonl": "26d851807483fcd9269d04a7474c59a6d0532a0e4dceee65f092220c2d10f30d"
+      },
+      "checkpoint": null,
+      "cpu_memory": {
+        "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+        "gpu_memory_bytes": null,
+        "logical_cpus_reported_by_os": 9,
+        "method": "psutil single worker process RSS, 10 ms sampling plus endpoints",
+        "peak_observed_rss_bytes": 577421312,
+        "psutil_version": "7.2.2",
+        "ram_bytes_reported_by_os": 10451423232,
+        "rss_end_bytes": 577409024,
+        "rss_start_bytes": 425365504,
+        "samples": 269
+      },
+      "encoder_final_sha256": "653ef804271d875bdb3170f3d6481796bf8fd0bf6717fdbff87f074c21f3c2b6",
+      "encoder_initial_sha256": "653ef804271d875bdb3170f3d6481796bf8fd0bf6717fdbff87f074c21f3c2b6",
+      "feature_audit": {
+        "adaptation_status": "PASS",
+        "first_training_feature_statistics": [
+          {
+            "mean": -0.08194395154714584,
+            "sd": 0.5096234679222107,
+            "shape": [
+              1,
+              16,
+              24,
+              24,
+              24
+            ]
+          },
+          {
+            "mean": 0.023803194984793663,
+            "sd": 0.5958266258239746,
+            "shape": [
+              1,
+              32,
+              12,
+              12,
+              12
+            ]
+          },
+          {
+            "mean": 0.037941448390483856,
+            "sd": 0.6005659103393555,
+            "shape": [
+              1,
+              64,
+              6,
+              6,
+              6
+            ]
+          },
+          {
+            "mean": -0.00952474121004343,
+            "sd": 0.6716552972793579,
+            "shape": [
+              1,
+              128,
+              3,
+              3,
+              3
+            ]
+          }
+        ],
+        "initial_group_sha256": {
+          "probe": "1119b395654fad9747d10bbf2af0ad7a92815d251e0d1c9256eda86e6c5d6b6c"
+        },
+        "initial_logits_sha256": "6ce3c7f66a9b1579c1fedded4fb1db33d5deaaba9a8ba8ccf83227e9684b5745",
+        "mean_step_seconds": 0.046744997333386586,
+        "nonzero_gradient_groups": [
+          "probe"
+        ],
+        "nonzero_update_groups": [
+          "probe"
+        ],
+        "reloaded_logits_sha256": "21ff311bc95883f7a58871c867e24becc7545c6cdf5c5cf02f0c72bdc0f90d4f",
+        "selected_group_changed": {
+          "probe": true
+        },
+        "selected_group_sha256": {
+          "probe": "f5360260e04425e26f3f9cb6d2a2d523e01a613912c557dc38263c7ef690e31f"
+        },
+        "selected_logits_sha256": "21ff311bc95883f7a58871c867e24becc7545c6cdf5c5cf02f0c72bdc0f90d4f",
+        "training_steps_seconds": 0.560939968000639,
+        "validation_seconds": 1.1077666119999776,
+        "validation_trajectory": [
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.018244919899777282,
+            "predicted_foreground_fraction_pooled": 0.27045593323834727,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 4,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.010968126138298596,
+            "predicted_foreground_fraction_pooled": 0.10879299816812538,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 8,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.0,
+            "predicted_foreground_fraction_pooled": 0.030124160390799917,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 12,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.018244919899777282,
+            "predicted_foreground_fraction_pooled": 0.27045593323834727,
+            "reader_targets": 4,
+            "selected_replay": true,
+            "step": 4,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          }
+        ]
+      },
+      "head_initial_sha256": "1119b395654fad9747d10bbf2af0ad7a92815d251e0d1c9256eda86e6c5d6b6c",
+      "optimization_diagnostics": {
+        "all_validation_predictions_empty": false,
+        "all_validation_predictions_full": false,
+        "budget_exhausted_without_patience_plateau": false,
+        "checkpoint_selection_complete": true,
+        "final_validation_complete": true,
+        "minimum_steps_satisfied": true,
+        "numerically_finite": true,
+        "patient_exposure_balanced": true,
+        "unvisited_training_patients": 0,
+        "unvisited_training_targets": 0,
+        "zero_validation_overlap": false
+      },
+      "optimizer_parameters": [
+        "head.bias",
+        "head.projections.0.weight",
+        "head.projections.1.weight",
+        "head.projections.2.weight",
+        "head.projections.3.weight"
+      ],
+      "parameter_budget": {
+        "adapter_parameters": 0,
+        "added_parameters": 0,
+        "encoder_parameters": 4399344,
+        "frozen_parameters": 4399344,
+        "probe_parameters": 241,
+        "total_parameters": 4399585,
+        "trainable_parameters": 241,
+        "trainable_percentage": 0.005477789382407659
+      },
+      "selected_step": 4,
+      "steps": 12,
+      "stopping_reason": "validation_early_stopping",
+      "test_reads": 0,
+      "training_first": {
+        "empty_prediction_fraction": 0.0,
+        "gradient_l2_before_clip": {
+          "probe": 3.0854804515838623
+        },
+        "loss": 1.686105728149414,
+        "mean_probability_off_target": 0.4939282536506653,
+        "mean_probability_on_target": 0.4581605792045593,
+        "parameter_update_l2": {
+          "probe": 0.015524175949394703
+        },
+        "predicted_foreground_fraction": 0.4746590554714203,
+        "step": 1,
+        "step_seconds": 0.09428436799998963,
+        "target_foreground_fraction": 0.016486871987581253
+      },
+      "training_last": {
+        "empty_prediction_fraction": 0.0,
+        "gradient_l2_before_clip": {
+          "probe": 1.7649670839309692
+        },
+        "loss": 1.3742916584014893,
+        "mean_probability_off_target": 0.3050462007522583,
+        "mean_probability_on_target": 0.2270137220621109,
+        "parameter_update_l2": {
+          "probe": 0.014294920489192009
+        },
+        "predicted_foreground_fraction": 0.0492570735514164,
+        "step": 12,
+        "step_seconds": 0.036838893000094686,
+        "target_foreground_fraction": 0.016486871987581253
+      },
+      "validation_counts": {
+        "empty_predictions": 0,
+        "fully_defined_hd95_patients": 2,
+        "patients": 2,
+        "reader_targets": 4,
+        "undefined_hd95_targets": 0
+      },
+      "validation_patient_macro": {
+        "absolute_volume_error_mm3": 1226.75,
+        "dice": 0.018244919899777282,
+        "empty_prediction_rate": 0.0,
+        "hd95_mm": 9.563918590545654,
+        "voxel_sensitivity": 0.13309244203553147
+      }
+    },
+    "suprem_feature": {
+      "adequacy": "BLOCKED",
+      "adequacy_reason": "Collapsed validation predictions block optimization adequacy/test.",
+      "artifact_sha256": {
+        "COMPLETED.json": "dddb00b85087cc242347d7b6aa47f296349c7073f7b38faaf647097216d395fd",
+        "checkpoint_lock.json": "1b23f02e5fec717c84103473d43b375c4193e576bf1631088e9b3712040a5405",
+        "optimization_gate.json": "f01532759002db341a5e26af96e01b408d2fa7a5426878be95b797913f8ac200",
+        "provenance.json": "bcd98c3584436d6ddb3baf0d80d3cb8e5facbf90dc92cb15d88f558a98f79b2c",
+        "result.json": "f607b6e3775f45134551145fbcce63ec1dfa0367c370b55fecd808c9ddee6813",
+        "selected_task.pt": "0f7ab9c8058a5fdf747ad715405c55ab6c86d4fb826b228eb20c6ea109efeeb4",
+        "training.jsonl": "6e2e96c8fd552b89b8c19102392bb8107a19d5392bb3b3817fb01499e23d1c32"
+      },
+      "checkpoint": {
+        "checkpoint_sha256": "2db81dc05cd9ea7234ca75e921e53e32b8716dc4cba88a6710742bfc282589a3",
+        "checkpoint_size_bytes": 56500623,
+        "encoder_tensor_count": 58,
+        "encoder_tensor_coverage": 1.0,
+        "verified_load_seconds": 0.2361007409999729
+      },
+      "cpu_memory": {
+        "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+        "gpu_memory_bytes": null,
+        "logical_cpus_reported_by_os": 9,
+        "method": "psutil single worker process RSS, 10 ms sampling plus endpoints",
+        "peak_observed_rss_bytes": 628953088,
+        "psutil_version": "7.2.2",
+        "ram_bytes_reported_by_os": 10451423232,
+        "rss_end_bytes": 628936704,
+        "rss_start_bytes": 425431040,
+        "samples": 253
+      },
+      "encoder_final_sha256": "334343192f91d8f7be5282c5c25e713b42973a9127bdf5e46b1dbe614adb9d00",
+      "encoder_initial_sha256": "334343192f91d8f7be5282c5c25e713b42973a9127bdf5e46b1dbe614adb9d00",
+      "feature_audit": {
+        "adaptation_status": "PASS",
+        "first_training_feature_statistics": [
+          {
+            "mean": -0.12647856771945953,
+            "sd": 0.5564600825309753,
+            "shape": [
+              1,
+              16,
+              24,
+              24,
+              24
+            ]
+          },
+          {
+            "mean": -0.012995450757443905,
+            "sd": 0.799363911151886,
+            "shape": [
+              1,
+              32,
+              12,
+              12,
+              12
+            ]
+          },
+          {
+            "mean": 0.09327644109725952,
+            "sd": 0.921888530254364,
+            "shape": [
+              1,
+              64,
+              6,
+              6,
+              6
+            ]
+          },
+          {
+            "mean": 0.856793999671936,
+            "sd": 2.1966147422790527,
+            "shape": [
+              1,
+              128,
+              3,
+              3,
+              3
+            ]
+          }
+        ],
+        "initial_group_sha256": {
+          "down": "de03b2023aadde0c56c14fce7e989b674378e8e39544939426075227e24a52c7",
+          "probe": "1119b395654fad9747d10bbf2af0ad7a92815d251e0d1c9256eda86e6c5d6b6c",
+          "up": "5db91edc7e92827ea0fe0e31fefe761fbf2b19a3d16c6a9477b1007461fe0496"
+        },
+        "initial_logits_sha256": "70ffe69ac2595f34811dc8d4a8aa3c163c36786182028bf8124ccb50e274a1d6",
+        "mean_step_seconds": 0.04694699958330754,
+        "nonzero_gradient_groups": [
+          "down",
+          "probe",
+          "up"
+        ],
+        "nonzero_update_groups": [
+          "down",
+          "probe",
+          "up"
+        ],
+        "reloaded_logits_sha256": "1893aac6bc9d46037c3bb14d50319ba193cc79fa65edb25715cfa58de63e9bbd",
+        "selected_group_changed": {
+          "down": true,
+          "probe": true,
+          "up": true
+        },
+        "selected_group_sha256": {
+          "down": "084fcdf294632c7eab03a09737ca50a6441b9b3f0315247b9abb53e5f7e06a2a",
+          "probe": "4b6568f7337f4f5f6101e0b31e78a1438a3cf42b38e007bd72ca15de940b365b",
+          "up": "baf629c122b6ff5391b3beceb9b0c60542260f74d96a4be2c2254aa36e7400eb"
+        },
+        "selected_logits_sha256": "1893aac6bc9d46037c3bb14d50319ba193cc79fa65edb25715cfa58de63e9bbd",
+        "training_steps_seconds": 0.5633639949996905,
+        "validation_seconds": 0.7317122500003279,
+        "validation_trajectory": [
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.0,
+            "predicted_foreground_fraction_pooled": 0.10080398941583554,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 4,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 4,
+            "patient_macro_dice": 0.0,
+            "predicted_foreground_fraction_pooled": 0.0,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 8,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 4,
+            "patient_macro_dice": 0.0,
+            "predicted_foreground_fraction_pooled": 0.0,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 12,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.0,
+            "predicted_foreground_fraction_pooled": 0.10080398941583554,
+            "reader_targets": 4,
+            "selected_replay": true,
+            "step": 4,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          }
+        ]
+      },
+      "head_initial_sha256": "1119b395654fad9747d10bbf2af0ad7a92815d251e0d1c9256eda86e6c5d6b6c",
+      "optimization_diagnostics": {
+        "all_validation_predictions_empty": false,
+        "all_validation_predictions_full": false,
+        "budget_exhausted_without_patience_plateau": false,
+        "checkpoint_selection_complete": true,
+        "final_validation_complete": true,
+        "minimum_steps_satisfied": true,
+        "numerically_finite": true,
+        "patient_exposure_balanced": true,
+        "unvisited_training_patients": 0,
+        "unvisited_training_targets": 0,
+        "zero_validation_overlap": true
+      },
+      "optimizer_parameters": [
+        "head.down.weight",
+        "head.probe.bias",
+        "head.probe.projections.0.weight",
+        "head.probe.projections.1.weight",
+        "head.probe.projections.2.weight",
+        "head.probe.projections.3.weight",
+        "head.up.weight"
+      ],
+      "parameter_budget": {
+        "adapter_parameters": 128,
+        "added_parameters": 128,
+        "encoder_parameters": 4399344,
+        "frozen_parameters": 4399344,
+        "probe_parameters": 241,
+        "total_parameters": 4399713,
+        "trainable_parameters": 369,
+        "trainable_percentage": 0.008386910691674663
+      },
+      "selected_step": 4,
+      "steps": 12,
+      "stopping_reason": "validation_early_stopping",
+      "test_reads": 0,
+      "training_first": {
+        "empty_prediction_fraction": 0.0,
+        "gradient_l2_before_clip": {
+          "down": 0.0,
+          "probe": 11.322601318359375,
+          "up": 0.16471880674362183
+        },
+        "loss": 1.8300185203552246,
+        "mean_probability_off_target": 0.5369486808776855,
+        "mean_probability_on_target": 0.24628521502017975,
+        "parameter_update_l2": {
+          "down": 0.0,
+          "probe": 0.015524177812039852,
+          "up": 0.007999804802238941
+        },
+        "predicted_foreground_fraction": 0.6509261131286621,
+        "step": 1,
+        "step_seconds": 0.0699920160000147,
+        "target_foreground_fraction": 0.016486871987581253
+      },
+      "training_last": {
+        "empty_prediction_fraction": 1.0,
+        "gradient_l2_before_clip": {
+          "down": 0.00667709531262517,
+          "probe": 1.4838260412216187,
+          "up": 0.03161264583468437
+        },
+        "loss": 1.1363861560821533,
+        "mean_probability_off_target": 0.08556625992059708,
+        "mean_probability_on_target": 0.03325054422020912,
+        "parameter_update_l2": {
+          "down": 0.007969127967953682,
+          "probe": 0.013092223554849625,
+          "up": 0.0077120596542954445
+        },
+        "predicted_foreground_fraction": 0.0,
+        "step": 12,
+        "step_seconds": 0.0414750320001076,
+        "target_foreground_fraction": 0.016486871987581253
+      },
+      "validation_counts": {
+        "empty_predictions": 0,
+        "fully_defined_hd95_patients": 2,
+        "patients": 2,
+        "reader_targets": 4,
+        "undefined_hd95_targets": 0
+      },
+      "validation_patient_macro": {
+        "absolute_volume_error_mm3": 393.25,
+        "dice": 0.0,
+        "empty_prediction_rate": 0.0,
+        "hd95_mm": 8.168822050094604,
+        "voxel_sensitivity": 0.0
+      }
+    },
+    "suprem_frozen": {
+      "adequacy": "BLOCKED",
+      "adequacy_reason": "Collapsed validation predictions block optimization adequacy/test.",
+      "artifact_sha256": {
+        "COMPLETED.json": "ddfaa2ceea68fd4e773356f424a0625003bfd66d7331145b52bf4f9a571588e7",
+        "checkpoint_lock.json": "3e19848db24b720dd89641c193249119d6a306e8ce1e572277cb39d411085f5a",
+        "optimization_gate.json": "f01532759002db341a5e26af96e01b408d2fa7a5426878be95b797913f8ac200",
+        "provenance.json": "e83569b51877471de9532cf21aa7749afcfa112e6d96c35dd2c6cf8f6a69e62e",
+        "result.json": "bade4ad63767d80e76c504630073fa08614e1aabd41a4518e4cb39bbb136b2a7",
+        "selected_task.pt": "46f526c76945c39f5ec4b350fd2b7ea12fa675839affb56d389cb349f967af70",
+        "training.jsonl": "74a3acabb13a21e960b3da582fac5b3b9e9d8124016a2d13d50321976022f79c"
+      },
+      "checkpoint": {
+        "checkpoint_sha256": "2db81dc05cd9ea7234ca75e921e53e32b8716dc4cba88a6710742bfc282589a3",
+        "checkpoint_size_bytes": 56500623,
+        "encoder_tensor_count": 58,
+        "encoder_tensor_coverage": 1.0,
+        "verified_load_seconds": 0.21766853999997693
+      },
+      "cpu_memory": {
+        "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+        "gpu_memory_bytes": null,
+        "logical_cpus_reported_by_os": 9,
+        "method": "psutil single worker process RSS, 10 ms sampling plus endpoints",
+        "peak_observed_rss_bytes": 628490240,
+        "psutil_version": "7.2.2",
+        "ram_bytes_reported_by_os": 10451423232,
+        "rss_end_bytes": 628477952,
+        "rss_start_bytes": 425332736,
+        "samples": 325
+      },
+      "encoder_final_sha256": "334343192f91d8f7be5282c5c25e713b42973a9127bdf5e46b1dbe614adb9d00",
+      "encoder_initial_sha256": "334343192f91d8f7be5282c5c25e713b42973a9127bdf5e46b1dbe614adb9d00",
+      "feature_audit": {
+        "adaptation_status": "PASS",
+        "first_training_feature_statistics": [
+          {
+            "mean": -0.12647856771945953,
+            "sd": 0.5564600825309753,
+            "shape": [
+              1,
+              16,
+              24,
+              24,
+              24
+            ]
+          },
+          {
+            "mean": -0.012995450757443905,
+            "sd": 0.799363911151886,
+            "shape": [
+              1,
+              32,
+              12,
+              12,
+              12
+            ]
+          },
+          {
+            "mean": 0.09327644109725952,
+            "sd": 0.921888530254364,
+            "shape": [
+              1,
+              64,
+              6,
+              6,
+              6
+            ]
+          },
+          {
+            "mean": 0.856793999671936,
+            "sd": 2.1966147422790527,
+            "shape": [
+              1,
+              128,
+              3,
+              3,
+              3
+            ]
+          }
+        ],
+        "initial_group_sha256": {
+          "probe": "1119b395654fad9747d10bbf2af0ad7a92815d251e0d1c9256eda86e6c5d6b6c"
+        },
+        "initial_logits_sha256": "70ffe69ac2595f34811dc8d4a8aa3c163c36786182028bf8124ccb50e274a1d6",
+        "mean_step_seconds": 0.07150748441665655,
+        "nonzero_gradient_groups": [
+          "probe"
+        ],
+        "nonzero_update_groups": [
+          "probe"
+        ],
+        "reloaded_logits_sha256": "e3d9931d7c03c91981643a19005213abcd9e9c547bdc460f5ab61d2e469f8beb",
+        "selected_group_changed": {
+          "probe": true
+        },
+        "selected_group_sha256": {
+          "probe": "52ef8fb553c93318f910522f4b23e22160370f1cfbf8290aa0aa0c75c0decb48"
+        },
+        "selected_logits_sha256": "e3d9931d7c03c91981643a19005213abcd9e9c547bdc460f5ab61d2e469f8beb",
+        "training_steps_seconds": 0.8580898129998786,
+        "validation_seconds": 1.1573433210000985,
+        "validation_trajectory": [
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.0,
+            "predicted_foreground_fraction_pooled": 0.10268674944026053,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 4,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 4,
+            "patient_macro_dice": 0.0,
+            "predicted_foreground_fraction_pooled": 0.0,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 8,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 4,
+            "patient_macro_dice": 0.0,
+            "predicted_foreground_fraction_pooled": 0.0,
+            "reader_targets": 4,
+            "selected_replay": false,
+            "step": 12,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          },
+          {
+            "empty_predictions": 0,
+            "patient_macro_dice": 0.0,
+            "predicted_foreground_fraction_pooled": 0.10268674944026053,
+            "reader_targets": 4,
+            "selected_replay": true,
+            "step": 4,
+            "target_foreground_fraction_pooled": 0.020761245674740483
+          }
+        ]
+      },
+      "head_initial_sha256": "1119b395654fad9747d10bbf2af0ad7a92815d251e0d1c9256eda86e6c5d6b6c",
+      "optimization_diagnostics": {
+        "all_validation_predictions_empty": false,
+        "all_validation_predictions_full": false,
+        "budget_exhausted_without_patience_plateau": false,
+        "checkpoint_selection_complete": true,
+        "final_validation_complete": true,
+        "minimum_steps_satisfied": true,
+        "numerically_finite": true,
+        "patient_exposure_balanced": true,
+        "unvisited_training_patients": 0,
+        "unvisited_training_targets": 0,
+        "zero_validation_overlap": true
+      },
+      "optimizer_parameters": [
+        "head.bias",
+        "head.projections.0.weight",
+        "head.projections.1.weight",
+        "head.projections.2.weight",
+        "head.projections.3.weight"
+      ],
+      "parameter_budget": {
+        "adapter_parameters": 0,
+        "added_parameters": 0,
+        "encoder_parameters": 4399344,
+        "frozen_parameters": 4399344,
+        "probe_parameters": 241,
+        "total_parameters": 4399585,
+        "trainable_parameters": 241,
+        "trainable_percentage": 0.005477789382407659
+      },
+      "selected_step": 4,
+      "steps": 12,
+      "stopping_reason": "validation_early_stopping",
+      "test_reads": 0,
+      "training_first": {
+        "empty_prediction_fraction": 0.0,
+        "gradient_l2_before_clip": {
+          "probe": 11.322601318359375
+        },
+        "loss": 1.8300185203552246,
+        "mean_probability_off_target": 0.5369486808776855,
+        "mean_probability_on_target": 0.24628521502017975,
+        "parameter_update_l2": {
+          "probe": 0.015524177812039852
+        },
+        "predicted_foreground_fraction": 0.6509261131286621,
+        "step": 1,
+        "step_seconds": 0.08153599099978237,
+        "target_foreground_fraction": 0.016486871987581253
+      },
+      "training_last": {
+        "empty_prediction_fraction": 1.0,
+        "gradient_l2_before_clip": {
+          "probe": 1.5104182958602905
+        },
+        "loss": 1.138107419013977,
+        "mean_probability_off_target": 0.0867786556482315,
+        "mean_probability_on_target": 0.03298370540142059,
+        "parameter_update_l2": {
+          "probe": 0.013129077851772308
+        },
+        "predicted_foreground_fraction": 0.0,
+        "step": 12,
+        "step_seconds": 0.06023424299974067,
+        "target_foreground_fraction": 0.016486871987581253
+      },
+      "validation_counts": {
+        "empty_predictions": 0,
+        "fully_defined_hd95_patients": 2,
+        "patients": 2,
+        "reader_targets": 4,
+        "undefined_hd95_targets": 0
+      },
+      "validation_patient_macro": {
+        "absolute_volume_error_mm3": 402.5,
+        "dice": 0.0,
+        "empty_prediction_rate": 0.0,
+        "hd95_mm": 8.1847825050354,
+        "voxel_sensitivity": 0.0
+      }
+    }
+  },
+  "baseline_configuration": {
+    "data": {
+      "budgets": [
+        1,
+        5,
+        10,
+        20
+      ],
+      "nested_support": true,
+      "test_fraction": 0.2,
+      "unit": "patient",
+      "validation_fraction": 0.2
+    },
+    "evaluation": {
+      "hd95_undefined_policy": "null_with_counts",
+      "metrics": [
+        "dice",
+        "hd95_mm",
+        "absolute_volume_error_mm3",
+        "voxel_sensitivity",
+        "empty_prediction"
+      ],
+      "selection_metric": "patient_macro_dice",
+      "selection_tie_break": "earliest_step",
+      "test_use": "once_after_optimization_adequacy",
+      "threshold": 0.5
+    },
+    "model": {
+      "architecture": "SegResNet",
+      "blocks_down": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "blocks_up": [
+        1,
+        1,
+        1
+      ],
+      "init_filters": 16,
+      "initialization": "random",
+      "norm_groups": 8,
+      "upsample_mode": "deconv"
+    },
+    "optimization": {
+      "batch_size": 2,
+      "ce_weight": 1.0,
+      "dice_weight": 1.0,
+      "gradient_clip_norm": 5.0,
+      "learning_rate": 0.001,
+      "loss": "DiceCELoss",
+      "max_steps": 8000,
+      "min_delta": 0.0005,
+      "min_steps": 2000,
+      "optimizer": "AdamW",
+      "patience": 10,
+      "validation_interval": 200,
+      "weight_decay": 1e-05
+    },
+    "reporting": {
+      "population_inference": false,
+      "seed_statistics": [
+        "mean",
+        "std",
+        "median",
+        "iqr",
+        "min",
+        "max"
+      ],
+      "seed_uncertainty": "stochastic_initialization_under_fixed_cohort"
+    },
+    "sampling": {
+      "flip_probability": 0.0,
+      "strategy": "patient-balanced-reader-rotation"
+    },
+    "schema_version": "1.0",
+    "seeds": {
+      "augmentation": 307,
+      "calibration": 997,
+      "loader": 401,
+      "model": [
+        17,
+        29,
+        43,
+        59,
+        71
+      ],
+      "partition": 101,
+      "smoke": 991,
+      "support": 211
+    },
+    "smoke": {
+      "max_steps": 12,
+      "min_steps": 4,
+      "patience": 2,
+      "validation_interval": 4
+    },
+    "task": "oracle-centred localized 3D pulmonary-nodule segmentation"
+  },
+  "candidate_index_sha256": "2eb56b7831ac44d35ae9a319caf795f72f209c99c35b7577f6ac4576af616ec3",
+  "clinical_performance_claimed": false,
+  "content_sha256": "d1d2fc5360da8e3234b047931bb13b0bf3ebfe7edffe3818f2f3dd1f8a904ee6",
+  "cpu_threads": 2,
+  "environment": {
+    "cuda_available": false,
+    "cuda_version": null,
+    "cudnn_version": null,
+    "device_name": null,
+    "git_commit": "ac780b88a9bc5ee0878a142fea01bc38a9d0c1df",
+    "monai_version": "1.6.0",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python_version": "3.12.14",
+    "pytorch_version": "2.13.0+cpu"
+  },
+  "external_transfer": "NOT RUN",
+  "feature_recipe": {
+    "adapter_seed": 1301,
+    "bottleneck": 4,
+    "feature_level": 0,
+    "method": "residual_pointwise_relu"
+  },
+  "head_seed": 991,
+  "implementation_sha256": "ffb580ab2e3d5aa617f41c8121b82a9e01b883da32808bdce3e188e7e6f63729",
+  "interpretation": "Descriptive differences use selection validation only.",
+  "k_patients": 1,
+  "official_checkpoint_revision": "46ab78c25b07ace573177ebffd02214f670c7e4f",
+  "official_model_id": "suprem-segresnet-2100",
+  "overlap_status": "NOT_ESTABLISHED",
+  "partition_sha256": "2c5dba6a18e2ed1c1dae4a7a49a05f9c9f19851bb7252c375604c152030930ae",
+  "phase": "smoke",
+  "preprocessing_sha256": "2149febfc6418e693ca4cf82f63ab257f2e84dee410a7e4539ddea83f4052c52",
+  "schema_version": "1.0",
+  "selected_validation_dice_difference_feature_minus_frozen": {
+    "random": 3.663974089923236e-05,
+    "suprem": null
+  },
+  "study": "paired CPU feature-output adaptation",
+  "support_reader_targets": 1,
+  "synthetic": true
+}

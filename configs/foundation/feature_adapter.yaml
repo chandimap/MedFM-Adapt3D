@@ -1,0 +1,4 @@
+method: residual_pointwise_relu
+feature_level: 0
+bottleneck: 4
+adapter_seed: 1301
